@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>스터디_01주차 on 박진우 Study Blog</title>
+    <title>스터디_01주차 on Study Blog</title>
     <link>https://forkgosu.github.io/study_week_01/</link>
-    <description>Recent content in 스터디_01주차 on 박진우 Study Blog</description>
+    <description>Recent content in 스터디_01주차 on Study Blog</description>
     <generator>Hugo 0.125.1</generator>
     <language>ko-kr</language>
     <atom:link href="https://forkgosu.github.io/study_week_01/index.xml" rel="self" type="application/rss+xml" />
@@ -40,7 +40,7 @@
       <link>https://forkgosu.github.io/study_week_01/5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://forkgosu.github.io/study_week_01/5/</guid>
-      <description>&amp;nbsp;과제 과제 복습(웹 서버 이해) 간이 로그인 페이지 만들기 (DB연결X) 로그인 페이지 이쁘게 만들기 (CSS / Bootstrap)</description>
+      <description>&amp;nbsp;과제 과제 복습(웹 서버 이해) 간이 로그인 페이지 만들기 (DB연결X) -&amp;gt; admin / admin1234 라고 입력했을때 로그인 시켜주는 페이지 로그인 페이지 이쁘게 만들기</description>
     </item>
   </channel>
 </rss>
