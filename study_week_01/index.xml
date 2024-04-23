@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HOME on 박진우 Study Blog</title>
-    <link>https://forkgosu.github.io/</link>
-    <description>Recent content in HOME on 박진우 Study Blog</description>
+    <title>스터디_01주차 on 박진우 Study Blog</title>
+    <link>https://forkgosu.github.io/study_week_01/</link>
+    <description>Recent content in 스터디_01주차 on 박진우 Study Blog</description>
     <generator>Hugo 0.125.1</generator>
     <language>ko-kr</language>
-    <atom:link href="https://forkgosu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://forkgosu.github.io/study_week_01/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(1) 환경설정</title>
       <link>https://forkgosu.github.io/study_week_01/1/</link>
@@ -34,13 +34,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://forkgosu.github.io/study_week_01/4/</guid>
       <description>&amp;nbsp;요약 요약 파라미터 : 사용자가 서버에 전달하는 데이터 파라미터 전달법 종류 2가지 (GET/POST) GET : 파라미터를 URL에 ?뒤에 붙혀서 전달 POST : Request Body에 붙</description>
-    </item>
-    <item>
-      <title>VSCode_SFTP_설정</title>
-      <link>https://forkgosu.github.io/study_support/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://forkgosu.github.io/study_support/1/</guid>
-      <description>&amp;nbsp;준비물 OS환경 : Windows 10 Pro VScode Download 폴더를 생성해서 VSCode를 해당위치에서 열어준다 Extension창에서 SFTP검색 후 설치해준다 F1을</description>
     </item>
     <item>
       <title>과제</title>

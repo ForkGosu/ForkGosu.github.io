@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>_스터디_보충 on 박진우 Study Blog</title>
+    <link>https://forkgosu.github.io/study_support/</link>
+    <description>Recent content in _스터디_보충 on 박진우 Study Blog</description>
+    <generator>Hugo 0.125.1</generator>
+    <language>ko-kr</language>
+    <atom:link href="https://forkgosu.github.io/study_support/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode_SFTP_설정</title>
+      <link>https://forkgosu.github.io/study_support/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://forkgosu.github.io/study_support/1/</guid>
+      <description>&amp;nbsp;준비물 OS환경 : Windows 10 Pro VScode Download 폴더를 생성해서 VSCode를 해당위치에서 열어준다 Extension창에서 SFTP검색 후 설치해준다 F1을</description>
+    </item>
+  </channel>
+</rss>
