@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ForkGosu Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ForkGosu Blog">
+  <title>Union-based-SQL-Injection이란? | ForkGosu Blog</title>
+  <meta name="keywords" content=" web-hacking , sql-injection , union-based-sql-injection ">
+  <meta name="description" content="Union-based-SQL-Injection이란? | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="자기소개기본 정보 이름 : 박진우출신 : 부산E-mail : &#x74;&#x72;&#101;&#101;&#54;&#x33;&#49;&#x36;&#x40;&#x6e;&#x61;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;포지션 : 모의 침투 테스터Links : Github, Blog  기술 스텍프로그래밍 언어 PythonPHP">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -647,18 +647,70 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="전체 화면 전환 단축 키 : s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Web-Hacking/SQL-Injection/02-Union-based-SQL-Injection" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4-%EB%AA%A9%EC%A0%81"><span class="toc-text">블로그 개설 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%811-%EA%B3%B5%EB%B6%80%ED%95%9C-%EA%B2%83-%EC%A0%95%EB%A6%AC"><span class="toc-text">목적1. 공부한 것 정리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%812-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"><span class="toc-text">목적2. 포트폴리오</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC"><span class="toc-text">사용된 블로그 플랫폼</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%95%B4%EB%8B%B9-%ED%85%8C%EB%A7%88%EC%9D%98-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5"><span class="toc-text">해당 테마의 주요 기능:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <h1 class="article-title">Union-based-SQL-Injection이란?</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="웹-해킹">웹-해킹</a> > 
+            
+            <a  data-rel="웹-해킹&lt;---&gt;SQLI">SQLI</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">web-hacking</a>
+            
+            <a class="color4">sql-injection</a>
+            
+            <a class="color1">union-based-sql-injection</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-09-01 18:33:11'>2024-05-26 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Union-based-SQL-Injection-%EC%9D%B4%EB%9E%80"><span class="toc-text">Union-based-SQL-Injection 이란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Union-based-SQL-Injection%EC%9D%98-%EC%9B%90%EB%A6%AC"><span class="toc-text">Union-based SQL Injection의 원리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Union-based-SQL-Injection%EC%9D%84-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%82%AC%EC%9A%A9-%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%A1%B0%EA%B1%B4"><span class="toc-text">Union-based SQL Injection을 제대로 사용 하기 위한 조건</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,23 +723,52 @@
     }
 </style>
 </div>
-            <h1 id="블로그-개설-목적"><a href="#블로그-개설-목적" class="headerlink" title="블로그 개설 목적"></a>블로그 개설 목적</h1><h2 id="목적1-공부한-것-정리"><a href="#목적1-공부한-것-정리" class="headerlink" title="목적1. 공부한 것 정리"></a>목적1. 공부한 것 정리</h2><p>블로그를 이용해서 지금 하고있는 공부에 대한 정리를 하려고 합니다  </p>
-<p>이유는 나중에 오류 해결이나 사용법이 기억나지 않을 때 정리된 글을 보며 빠르게 떠올리기 위함입니다</p>
-<pre><code class="Python">print(&quot;hello world!&quot;)
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Union-based-SQL-Injection-이란"><a href="#Union-based-SQL-Injection-이란" class="headerlink" title="Union-based-SQL-Injection 이란?"></a>Union-based-SQL-Injection 이란?</h2><p><code>UNION</code>을 사용해 SQL문의 <code>SELECT</code>결과에 또 다른 <code>SELECT</code>를 추가하는 공격입니다.</p>
+<h2 id="Union-based-SQL-Injection의-원리"><a href="#Union-based-SQL-Injection의-원리" class="headerlink" title="Union-based SQL Injection의 원리"></a>Union-based SQL Injection의 원리</h2><p>예를 들어, 아래와 같이 작성된 PHP 코드가 있습니다.</p>
+<pre><code class="PHP">$sql = &quot;SELECT id FROM user WHERE id=&#39;$_id&#39; AND pass=&#39;$_pass&#39; LIMIT 1&quot;;
 </code></pre>
-<h2 id="목적2-포트폴리오"><a href="#목적2-포트폴리오" class="headerlink" title="목적2. 포트폴리오"></a>목적2. 포트폴리오</h2><p>공부한 것 정리를 보여주며 이렇게 공부를 했고 </p>
-<p>내가 아는 지식이 어느정도인지 보여주기 위한 용도인 포트폴리오로도 사용하기 위함입니다. </p>
-<h2 id="사용된-블로그-플랫폼"><a href="#사용된-블로그-플랫폼" class="headerlink" title="사용된 블로그 플랫폼"></a>사용된 블로그 플랫폼</h2><p>해당 블로그는 hexo를 이용한 정적 페이지로 만들어졌고  </p>
-<p>해당 테마는 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>에 들어가시면 다운 받을 수 있습니다</p>
-<h4 id="해당-테마의-주요-기능"><a href="#해당-테마의-주요-기능" class="headerlink" title="해당 테마의 주요 기능:"></a>해당 테마의 주요 기능:</h4><ul>
-<li>검색은 기사 제목, 태그(#tag), 작성자(@author)를 지원합니다.</li>
-<li>패드&#x2F;휴대폰 및 기타 모바일 단말기 적응</li>
-<li>페이지 전역 단축키 3-hexo 단축키 설명</li>
-</ul>
+<p>위 코드에서 <code>$_id</code>와 <code>$_pass</code>의 값으로 SQL 쿼리문을 삽입하여 SQL Injection 공격을 할 수 있습니다.<br><code>UNION</code>공격을 위해 <code>$_id</code> 값으로 <code>&#39; UNION SELECT &#39;admin&#39;#</code>을 입력하면, 아래와 같이 SQL 쿼리문이 변경됩니다.</p>
+<pre><code class="PHP">$sql = &quot;SELECT id FROM user WHERE id=&#39;&#39; UNION SELECT &#39;admin&#39;#&#39; AND pass=&#39;____&#39; LIMIT 1&quot;;
+</code></pre>
+<p><img src="/image/Web-Hacking/SQL-Injection/03.png"></p>
+<h2 id="Union-based-SQL-Injection을-제대로-사용-하기-위한-조건"><a href="#Union-based-SQL-Injection을-제대로-사용-하기-위한-조건" class="headerlink" title="Union-based SQL Injection을 제대로 사용 하기 위한 조건"></a>Union-based SQL Injection을 제대로 사용 하기 위한 조건</h2><p><strong>Union-based SQL Injection 사용 하려면 <code>앞의 SELECT와 컬럼 갯수가 동일</code></strong> 해야합니다.</p>
+<p>그래서 <code>ORDER BY</code>구문을 사용해 앞의 <code>SELECT</code>의 컬럼이 몇개인지 확인이 가능합니다.</p>
+<p>예를 들어, 아래와 같이 작성된 PHP 코드가 있습니다.</p>
+<pre><code class="PHP">$sql = &quot;SELECT id FROM user WHERE id=&#39;$_id&#39; AND pass=&#39;$_pass&#39; LIMIT 1&quot;;
+</code></pre>
+<p>해당 쿼리에서 <code>$_id</code> 값으로 <code>&#39; ORDER BY 1#</code>을 입력하면, 아래와 같이 SQL문이 변경됩니다.</p>
+<pre><code class="PHP">$sql = &quot;SELECT id FROM user WHERE id=&#39;&#39; ORDER BY 1#&#39; AND pass=&#39;____&#39; LIMIT 1&quot;;
+</code></pre>
+<p>이렇게 변경되면 오류가 나지 않습니다.</p>
+<p><img src="/image/Web-Hacking/SQL-Injection/04.png"></p>
+<p>하지만 아래와 같이 <code>$_id</code> 값으로 <code>&#39; ORDER BY 2#</code>을 입력하면 오류가 나게 될 것입니다.</p>
+<pre><code class="PHP">$sql = &quot;SELECT id FROM user WHERE id=&#39;&#39; ORDER BY 2#&#39; AND pass=&#39;____&#39; LIMIT 1&quot;;
+</code></pre>
+<p><img src="/image/Web-Hacking/SQL-Injection/05.png"></p>
+<p>오류가 나는 이유는 <code>ORDER BY</code>에 필요한 SELECT의 컬럼 갯수가 1개이기 때문에 2번째의 컬럼으로 <code>ORDER BY</code>할 수 없기 때문에 나는 오류 입니다.</p>
+<p>이렇게 <code>SELECT</code> 뒤의 값에 <code>id</code> 하나 또는 여러개를 조회하고 있을 수 있기 때문에 이 컬럼이 몇개인지 확인하기 위하여</p>
+<p><code>ORDER BY</code>뒤에 숫자를 붙혀서 1부터 하나씩 확인가면서 <code>SELECT</code>되는 <code>column</code>의 갯수를 유추 할 수 있습니다.</p>
+<p>유추가 되었다면 <code>UNION SELECT (갯수만큼 1,1,1...)</code> 해당 SQL문을 사용 할 수 있게 될 것입니다.</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +777,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

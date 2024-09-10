@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ForkGosu Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ForkGosu Blog">
+  <title>Burp Suite 사용법 | ForkGosu Blog</title>
+  <meta name="keywords" content=" informational , web ">
+  <meta name="description" content="Burp Suite 사용법 | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="자기소개기본 정보 이름 : 박진우출신 : 부산E-mail : &#x74;&#x72;&#101;&#101;&#54;&#x33;&#49;&#x36;&#x40;&#x6e;&#x61;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;포지션 : 모의 침투 테스터Links : Github, Blog  기술 스텍프로그래밍 언어 PythonPHP">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -647,18 +647,66 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="전체 화면 전환 단축 키 : s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Informational-Article/03-About-Burp-Suite" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4-%EB%AA%A9%EC%A0%81"><span class="toc-text">블로그 개설 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%811-%EA%B3%B5%EB%B6%80%ED%95%9C-%EA%B2%83-%EC%A0%95%EB%A6%AC"><span class="toc-text">목적1. 공부한 것 정리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%812-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"><span class="toc-text">목적2. 포트폴리오</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC"><span class="toc-text">사용된 블로그 플랫폼</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%95%B4%EB%8B%B9-%ED%85%8C%EB%A7%88%EC%9D%98-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5"><span class="toc-text">해당 테마의 주요 기능:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <h1 class="article-title">Burp Suite 사용법</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="정보글">정보글</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">informational</a>
+            
+            <a class="color4">web</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-09-09 19:54:26'>2024-05-12 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Burp-Suite%EB%9E%80"><span class="toc-text">Burp Suite란?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Burp-Suite-%EC%82%AC%EC%9A%A9-%EC%A0%84"><span class="toc-text">Burp Suite 사용 전</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Burp-Suite-%EC%82%AC%EC%9A%A9-%ED%9B%84"><span class="toc-text">Burp Suite 사용 후</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Burp-Suite-%EC%8B%9C%EC%9E%91"><span class="toc-text">Burp Suite 시작</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Display-%EC%84%A4%EC%A0%95"><span class="toc-text">Display 설정</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Response-%EC%84%A4%EC%A0%95"><span class="toc-text">Response 설정</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Proxy-%EC%84%A4%EC%A0%95"><span class="toc-text">Proxy 설정</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A3%BC-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85"><span class="toc-text">주 기능 설명</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Open-browser"><span class="toc-text">Open browser</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-history"><span class="toc-text">HTTP history</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Intercept"><span class="toc-text">Intercept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Repeater"><span class="toc-text">Repeater</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%81%9D%EC%9C%BC%EB%A1%9C"><span class="toc-text">끝으로</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,23 +719,105 @@
     }
 </style>
 </div>
-            <h1 id="블로그-개설-목적"><a href="#블로그-개설-목적" class="headerlink" title="블로그 개설 목적"></a>블로그 개설 목적</h1><h2 id="목적1-공부한-것-정리"><a href="#목적1-공부한-것-정리" class="headerlink" title="목적1. 공부한 것 정리"></a>목적1. 공부한 것 정리</h2><p>블로그를 이용해서 지금 하고있는 공부에 대한 정리를 하려고 합니다  </p>
-<p>이유는 나중에 오류 해결이나 사용법이 기억나지 않을 때 정리된 글을 보며 빠르게 떠올리기 위함입니다</p>
-<pre><code class="Python">print(&quot;hello world!&quot;)
-</code></pre>
-<h2 id="목적2-포트폴리오"><a href="#목적2-포트폴리오" class="headerlink" title="목적2. 포트폴리오"></a>목적2. 포트폴리오</h2><p>공부한 것 정리를 보여주며 이렇게 공부를 했고 </p>
-<p>내가 아는 지식이 어느정도인지 보여주기 위한 용도인 포트폴리오로도 사용하기 위함입니다. </p>
-<h2 id="사용된-블로그-플랫폼"><a href="#사용된-블로그-플랫폼" class="headerlink" title="사용된 블로그 플랫폼"></a>사용된 블로그 플랫폼</h2><p>해당 블로그는 hexo를 이용한 정적 페이지로 만들어졌고  </p>
-<p>해당 테마는 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>에 들어가시면 다운 받을 수 있습니다</p>
-<h4 id="해당-테마의-주요-기능"><a href="#해당-테마의-주요-기능" class="headerlink" title="해당 테마의 주요 기능:"></a>해당 테마의 주요 기능:</h4><ul>
-<li>검색은 기사 제목, 태그(#tag), 작성자(@author)를 지원합니다.</li>
-<li>패드&#x2F;휴대폰 및 기타 모바일 단말기 적응</li>
-<li>페이지 전역 단축키 3-hexo 단축키 설명</li>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Burp-Suite란"><a href="#Burp-Suite란" class="headerlink" title="Burp Suite란?"></a>Burp Suite란?</h2><p>침투 테스트 및 취약점 찾기에서 사용되는 프록시 기반 도구 입니다.</p>
+<p>그래서 서버와 클라이언트 사이에서 데이터를 주고받을 때 Burp Suite를 통해서 주고 받아 데이터를 확인하거나 변조할 수 있게 만드는 프로그램입니다.</p>
+<p>예시 그림으로는 다음과 같습니다.</p>
+<h3 id="Burp-Suite-사용-전"><a href="#Burp-Suite-사용-전" class="headerlink" title="Burp Suite 사용 전"></a>Burp Suite 사용 전</h3><p><img src="/image/Informational-Article/05.png"></p>
+<h3 id="Burp-Suite-사용-후"><a href="#Burp-Suite-사용-후" class="headerlink" title="Burp Suite 사용 후"></a>Burp Suite 사용 후</h3><p><img src="/image/Informational-Article/06.png"></p>
+<h2 id="Burp-Suite-시작"><a href="#Burp-Suite-시작" class="headerlink" title="Burp Suite 시작"></a>Burp Suite 시작</h2><ol>
+<li><p>먼저 Burp Suite 다운로드 사이트에 들어간 후 Go straight downloads를 클릭합니다.(<a target="_blank" rel="noopener" href="https://portswigger.net/burp/communitydownload">https://portswigger.net/burp/communitydownload</a>)<br><img src="/image/Informational-Article/07.png"></p>
+</li>
+<li><p>자신에게 맞는 운영체재를 확인하고 DOWNLOAD버튼을 클릭합니다.<br><img src="/image/Informational-Article/08.png"></p>
+</li>
+<li><p>설치가 된 후 실행하면 다음과 같이 프로젝트를 만드는 화면이 보이는데 임시로 써도 되기 때문에 임시로 메모리에 프로젝트를 저장한다고 한 뒤 Next를 눌러줍니다.<br><img src="/image/Informational-Article/09.png"></p>
+</li>
+<li><p>이후 프로젝트에서 사용할 설정을 선택하라고 나오는데 기본 설정 사용한다고 한 뒤 Start Burp를 눌러줍니다.<br><img src="/image/Informational-Article/10.png"></p>
+</li>
+</ol>
+<h2 id="Display-설정"><a href="#Display-설정" class="headerlink" title="Display 설정"></a>Display 설정</h2><p>테마를 선택하고 한글 폰트가 깨지는 것을 방지하기위해 폰트를 바꿔줘야 합니다.</p>
+<ol>
+<li><p>Display를 설정을 하기위해 Setting에 들어갑니다.<br><img src="/image/Informational-Article/11.png"></p>
+</li>
+<li><p>다크 테마를 할지 밝은 테마를 할지 선택합니다.<br><img src="/image/Informational-Article/12.png"></p>
+</li>
+<li><p>한글이 포함된 글꼴로 수정 한 뒤, Character Sets을 UTF-8로 수정 합니다(한글 사용 시 폰트 깨짐 방지)<br><img src="/image/Informational-Article/13.png"></p>
+</li>
+</ol>
+<h2 id="Response-설정"><a href="#Response-설정" class="headerlink" title="Response 설정"></a>Response 설정</h2><p>서버로 부터 받은 응답 값을 모두 확인하기 위해서는 다음과 같은 설정이 필요합니다.</p>
+<ol>
+<li>Request interception rules에서 맨 위 Edit클릭 후 <code>(^gif$|^jpg$|^png$|^css$|^js$|^ico$|^svg$|^eot$|^woff$|^woff2$|^ttf$)</code> 로 수정한 뒤, Response interception rules도 해당 사진과 같이 체크 삽니다<br><img src="/image/Informational-Article/14.png"></li>
+</ol>
+<h2 id="Proxy-설정"><a href="#Proxy-설정" class="headerlink" title="Proxy 설정"></a>Proxy 설정</h2><p>이제 서버와 연결되는 것이 아니라 Burp Suite로 데이터를 보내기 위해 Proxy 설정을 해줘야 합니다.</p>
+<p>하지만 저는 브라우저를 열 때는 Burp Suite에서 빠르게 시작 할 수 있게 제공되는 Proxy설정이 끝난 브라우저를 이용 할 것이기 때문에 해당 작업은 이런게 있다는 것을 보기만 해 두시면 될 것 같습니다.</p>
+<p>해당 설정 단계는 나중에 모바일이나 다른 프로그램 작업 시 Proxy 설정을 해야 할 때 필요한 설정이며 <strong>브라우저 사용 시에는 굳이 안해줘도 됩니다.</strong></p>
+<p>Chrome 브라우저는 Proxy 설정을 하려면 Window 설정을 건드려야 하기 때문에 Firefox로 진행하겠습니다.</p>
+<ol>
+<li><p>Firefox의 설정을 엽니다<br><img src="/image/Informational-Article/15.png"></p>
+</li>
+<li><p>스크롤을 맨 밑으로 내려서<br><img src="/image/Informational-Article/16.png"></p>
+</li>
+<li><p>수동 프록시 설정으로 한 뒤 127.0.0.1:8080으로 설정 한 뒤 HTTPS에도 이 프록시를 사용 체크 후 확인을 누릅니다.<br><img src="/image/Informational-Article/17.png"></p>
+</li>
+<li><p>Burp Suite에서도 127.0.0.1:8080이 되어 있는지 확인 합니다<br><img src="/image/Informational-Article/18.png"></p>
+</li>
+<li><p>이제 해당 firefox 브라우저로 접속하면 Burp Suite의 HTTP History에서 잘 Proxy되는 지 확인 할 수 있습니다.<br><img src="/image/Informational-Article/19.png"></p>
+</li>
+</ol>
+<h2 id="주-기능-설명"><a href="#주-기능-설명" class="headerlink" title="주 기능 설명"></a>주 기능 설명</h2><p>많은 기능들이 있지만 일단 주로 사용하는 기능만 설명 드리겠습니다.</p>
+<ul>
+<li>Open browser</li>
+<li>HTTP history</li>
+<li>Intercept</li>
+<li>Repeater</li>
 </ul>
+<h2 id="Open-browser"><a href="#Open-browser" class="headerlink" title="Open browser"></a>Open browser</h2><p>해당 버튼을 사용하면 Proxy 설정을 하지 않아도 Proxy되어 있는 브라우저를 제공받을 수 있습니다.(Chrome이라 Firefox보다 익숙한 것 같아서 저는 해당 기능을 자주 사용합니다.)<br><img src="/image/Informational-Article/20.png"></p>
+<h2 id="HTTP-history"><a href="#HTTP-history" class="headerlink" title="HTTP history"></a>HTTP history</h2><p>Proxy 탭에 있으며 HTTP 통신으로 주거나 받은 기록을 확인할 수 있는 로그창 입니다.</p>
+<p>해당 기능을 이용하여 데이터를 어떻게 보냈는지 또 무엇을 어떻게 받았는지 빠르고 자세히 분석 할 수 있습니다<br><img src="/image/Informational-Article/21.png"></p>
+<h2 id="Intercept"><a href="#Intercept" class="headerlink" title="Intercept"></a>Intercept</h2><p>Proxy 탭에 있으며 통신을 주고 받을 때 가로채서 해당 Request나 Response를 수정해서 서버로 주거나 수정해서 브라우저에 보낼 수 있습니다.</p>
+<p>저는 받은 데이터를 변조하기 위해 주로 사용합니다.</p>
+<ol>
+<li><p>Intercept on 버튼을 클릭해서 가운데 그림에 빨간색 불빛이 되게 만듭니다.<br><img src="/image/Informational-Article/22.png"></p>
+</li>
+<li><p>만약 Request뿐만 아니라 Response도 멈추게 하고 싶다면 오른쪽 클릭 후 Do intercept에 Response to this request를 클릭 해줍니다.<br><img src="/image/Informational-Article/24.png"></p>
+</li>
+<li><p>Forward를 클릭하면 서버로 보내지고 그 전에 수정할 사항이 있다면 수정 할 수 있습니다<br><img src="/image/Informational-Article/23.png"></p>
+</li>
+<li><p>만약 Do intercept에 Response to this request를 클릭 해줬다면 브라우저로 받을 데이터를 수정해서 보내 줄 수 있습니다.<br><img src="/image/Informational-Article/25.png"></p>
+</li>
+</ol>
+<h2 id="Repeater"><a href="#Repeater" class="headerlink" title="Repeater"></a>Repeater</h2><p>Repeater탭에 따로 있으며 Request를 수정해서 서버로 데이터를 건낼 때 여러 번 수정을 하며 빠르게 서버의 반응을 볼 수 있습니다.</p>
+<p>저는 데이터를 줄 때 변조하기 위해 주로 사용합니다.</p>
+<ol>
+<li><p>여러번 수정 할 Request를 HTTP history에서 선택하여 오른쪽 클릭 후 Send to Repeater를 클릭하여 Repeater탭으로 보냅니다.<br><img src="/image/Informational-Article/26.png"></p>
+</li>
+<li><p>Repeater탭으로 이동하여 왼쪽에 Get파라미터나 Post파라미터 등의 정보들을 수정 한 뒤 Send 버튼을 누르면 수정된 요청에 대한 결과를 받을 수 있습니다.<br><img src="/image/Informational-Article/27.png"></p>
+</li>
+<li><p>위의 사진에서 search_word라는 파라미터 값을 수정한 뒤 Send 버튼을 누르면 결과가 바뀌었다는 것을 알 수 있습니다.<br><img src="/image/Informational-Article/28.png"></p>
+</li>
+</ol>
+<h2 id="끝으로"><a href="#끝으로" class="headerlink" title="끝으로"></a>끝으로</h2><p>Burp Suite의 기능 중에 Decoder로 Base64를 디코드,인코드하는 기능이나 Comparer로 긴 글을 비교하는 유용한 기능도 있습니다.</p>
+<p>Intruder 기능으로 Brute Force(무작위 대입공격)이 가능 하지만 해당기능을 Community 버전에서 사용 시 요청이 느리며 제한적이라 직접 파이썬 코드로 구현해야 빠릅니다.</p>
+<p>지금 설명한 기능만으로도 분석만 잘 한다면 웹 해킹은 거의 다 가능 할 것이며 만약 다른 기능을 알고 싶다면 기능을 하나씩 검색해 보며 분석하는 것도 좋을 것 같습니다.</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +826,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

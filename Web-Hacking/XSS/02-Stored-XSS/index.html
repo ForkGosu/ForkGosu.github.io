@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ForkGosu Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ForkGosu Blog">
+  <title>Stored XSS란? | ForkGosu Blog</title>
+  <meta name="keywords" content=" web-hacking , hacking , xss , stored-xss ">
+  <meta name="description" content="Stored XSS란? | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="자기소개기본 정보 이름 : 박진우출신 : 부산E-mail : &#x74;&#x72;&#101;&#101;&#54;&#x33;&#49;&#x36;&#x40;&#x6e;&#x61;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;포지션 : 모의 침투 테스터Links : Github, Blog  기술 스텍프로그래밍 언어 PythonPHP">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -647,18 +647,72 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="전체 화면 전환 단축 키 : s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Web-Hacking/XSS/02-Stored-XSS" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4-%EB%AA%A9%EC%A0%81"><span class="toc-text">블로그 개설 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%811-%EA%B3%B5%EB%B6%80%ED%95%9C-%EA%B2%83-%EC%A0%95%EB%A6%AC"><span class="toc-text">목적1. 공부한 것 정리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%812-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"><span class="toc-text">목적2. 포트폴리오</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC"><span class="toc-text">사용된 블로그 플랫폼</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%95%B4%EB%8B%B9-%ED%85%8C%EB%A7%88%EC%9D%98-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5"><span class="toc-text">해당 테마의 주요 기능:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <h1 class="article-title">Stored XSS란?</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="웹-해킹">웹-해킹</a> > 
+            
+            <a  data-rel="웹-해킹&lt;---&gt;XSS">XSS</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">web-hacking</a>
+            
+            <a class="color3">hacking</a>
+            
+            <a class="color4">xss</a>
+            
+            <a class="color1">stored-xss</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-09-09 22:43:34'>2024-06-16 01:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stored-XSS%EB%9E%80"><span class="toc-text">Stored XSS란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stored-XSS%EC%9D%98-%EC%9B%90%EB%A6%AC"><span class="toc-text">Stored XSS의 원리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS-%ED%99%95%EC%9D%B8%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95"><span class="toc-text">XSS 확인하는 방법</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%A7%89%ED%98%80%EC%9E%88%EC%A7%80-%EC%95%8A%EC%9D%80-%EA%B2%BD%EC%9A%B0"><span class="toc-text">막혀있지 않은 경우</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS%EA%B0%80-%EB%A7%89%ED%98%80%EC%9E%88%EB%8A%94-%EA%B2%BD%EC%9A%B0"><span class="toc-text">XSS가 막혀있는 경우</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,23 +725,43 @@
     }
 </style>
 </div>
-            <h1 id="블로그-개설-목적"><a href="#블로그-개설-목적" class="headerlink" title="블로그 개설 목적"></a>블로그 개설 목적</h1><h2 id="목적1-공부한-것-정리"><a href="#목적1-공부한-것-정리" class="headerlink" title="목적1. 공부한 것 정리"></a>목적1. 공부한 것 정리</h2><p>블로그를 이용해서 지금 하고있는 공부에 대한 정리를 하려고 합니다  </p>
-<p>이유는 나중에 오류 해결이나 사용법이 기억나지 않을 때 정리된 글을 보며 빠르게 떠올리기 위함입니다</p>
-<pre><code class="Python">print(&quot;hello world!&quot;)
-</code></pre>
-<h2 id="목적2-포트폴리오"><a href="#목적2-포트폴리오" class="headerlink" title="목적2. 포트폴리오"></a>목적2. 포트폴리오</h2><p>공부한 것 정리를 보여주며 이렇게 공부를 했고 </p>
-<p>내가 아는 지식이 어느정도인지 보여주기 위한 용도인 포트폴리오로도 사용하기 위함입니다. </p>
-<h2 id="사용된-블로그-플랫폼"><a href="#사용된-블로그-플랫폼" class="headerlink" title="사용된 블로그 플랫폼"></a>사용된 블로그 플랫폼</h2><p>해당 블로그는 hexo를 이용한 정적 페이지로 만들어졌고  </p>
-<p>해당 테마는 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>에 들어가시면 다운 받을 수 있습니다</p>
-<h4 id="해당-테마의-주요-기능"><a href="#해당-테마의-주요-기능" class="headerlink" title="해당 테마의 주요 기능:"></a>해당 테마의 주요 기능:</h4><ul>
-<li>검색은 기사 제목, 태그(#tag), 작성자(@author)를 지원합니다.</li>
-<li>패드&#x2F;휴대폰 및 기타 모바일 단말기 적응</li>
-<li>페이지 전역 단축키 3-hexo 단축키 설명</li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Stored-XSS란"><a href="#Stored-XSS란" class="headerlink" title="Stored XSS란?"></a>Stored XSS란?</h2><p>사람들이 보게되는 곳(게시판 등)에 스크립트를 저장된 XSS를 말합니다.</p>
+<p>서버에 저장되기 때문에 사이트를 돌아다니다 저장된 페이지를 클릭하는 순간 XSS를 만나서 실행이 되는 위험한 취약점 입니다.</p>
+<h2 id="Stored-XSS의-원리"><a href="#Stored-XSS의-원리" class="headerlink" title="Stored XSS의 원리"></a>Stored XSS의 원리</h2><p>예시를 들면 게시판 같은 곳에서 글 작성 하면 서버의 DB에 게시글에 대한 데이터가 저장된 뒤 저장된 게시글을 보여주기 위해 DB에서 데이터를 가져와서 HTML상에 보여주었을 때 해당 스크립트가 사용자의 브라우저에서 실행됩니다.</p>
+<p>다음은 예시 입니다.</p>
+<ol>
+<li><p>글을 작성 할 때 알림창에 <code>1</code>이라는 내용이 뜰 수 있도록 <code>&lt;script&gt;alert(1);&lt;/script&gt;</code>을 적은 글을 작성 합니다.<br><img src="/image/Web-Hacking/XSS/01.png"></p>
+</li>
+<li><p>해당 스크립트는 서버측 게시판의 DB에 저장이 됩니다.<br><img src="/image/Web-Hacking/XSS/02.png"></p>
+</li>
+<li><p>저장된 스크립트가 있는 게시글을 누군가 클릭했을 때 스크립트가 실행되게 됩니다.<br><img src="/image/Web-Hacking/XSS/03.png"></p>
+</li>
+</ol>
+<h2 id="XSS-확인하는-방법"><a href="#XSS-확인하는-방법" class="headerlink" title="XSS 확인하는 방법"></a>XSS 확인하는 방법</h2><p>XSS가 막혀있는지 확인하는 방법으로는 서버에서 사용자가 저장한 데이터를 불러올 때 <code>&lt;,&#39;,&quot;,&gt;</code>가 HTML Entity로 치환되어 있는지 확인하는 것입니다.</p>
+<p>위에 있는 글에서 작성되어있는 스크립트가 막혔을 때와 뚫려있는 경우를 간단한 그림 2개로 표현하겠습니다. </p>
+<h3 id="막혀있지-않은-경우"><a href="#막혀있지-않은-경우" class="headerlink" title="막혀있지 않은 경우"></a>막혀있지 않은 경우</h3><p><img src="/image/Web-Hacking/XSS/04.png"></p>
+<h3 id="XSS가-막혀있는-경우"><a href="#XSS가-막혀있는-경우" class="headerlink" title="XSS가 막혀있는 경우"></a>XSS가 막혀있는 경우</h3><p><img src="/image/Web-Hacking/XSS/05.png"></p>
+<p>막는 방법에 대해 자세한 내용은 <a href="../01-XSS">XSS(Cross Site Scripting)란?</a> 포스트에 작성하였습니다.</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +770,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

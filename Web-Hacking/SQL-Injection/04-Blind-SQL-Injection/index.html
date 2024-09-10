@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ForkGosu Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ForkGosu Blog">
+  <title>Blind-SQL-Injection이란? | ForkGosu Blog</title>
+  <meta name="keywords" content=" web-hacking , sql-injection , blind-sql-injection ">
+  <meta name="description" content="Blind-SQL-Injection이란? | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="자기소개기본 정보 이름 : 박진우출신 : 부산E-mail : &#x74;&#x72;&#101;&#101;&#54;&#x33;&#49;&#x36;&#x40;&#x6e;&#x61;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;포지션 : 모의 침투 테스터Links : Github, Blog  기술 스텍프로그래밍 언어 PythonPHP">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -647,18 +647,70 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="전체 화면 전환 단축 키 : s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Web-Hacking/SQL-Injection/04-Blind-SQL-Injection" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4-%EB%AA%A9%EC%A0%81"><span class="toc-text">블로그 개설 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%811-%EA%B3%B5%EB%B6%80%ED%95%9C-%EA%B2%83-%EC%A0%95%EB%A6%AC"><span class="toc-text">목적1. 공부한 것 정리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%812-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"><span class="toc-text">목적2. 포트폴리오</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC"><span class="toc-text">사용된 블로그 플랫폼</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%95%B4%EB%8B%B9-%ED%85%8C%EB%A7%88%EC%9D%98-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5"><span class="toc-text">해당 테마의 주요 기능:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <h1 class="article-title">Blind-SQL-Injection이란?</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="웹-해킹">웹-해킹</a> > 
+            
+            <a  data-rel="웹-해킹&lt;---&gt;SQLI">SQLI</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">web-hacking</a>
+            
+            <a class="color4">sql-injection</a>
+            
+            <a class="color5">blind-sql-injection</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-09-09 20:04:46'>2024-06-02 01:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Blind-SQL-Injection-%EC%9D%B4%EB%9E%80"><span class="toc-text">Blind-SQL-Injection 이란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blind-SQL-Injection-%EB%B0%A9%EB%B2%95"><span class="toc-text">Blind-SQL-Injection 방법</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boolean-based"><span class="toc-text">Boolean based</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean-based-%EA%B3%B5%EA%B2%A9-%ED%8F%AC%EB%A7%B7-%EB%A7%8C%EB%93%A4%EA%B8%B0"><span class="toc-text">Boolean based 공격 포맷 만들기</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Time-based"><span class="toc-text">Time based</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,23 +723,49 @@
     }
 </style>
 </div>
-            <h1 id="블로그-개설-목적"><a href="#블로그-개설-목적" class="headerlink" title="블로그 개설 목적"></a>블로그 개설 목적</h1><h2 id="목적1-공부한-것-정리"><a href="#목적1-공부한-것-정리" class="headerlink" title="목적1. 공부한 것 정리"></a>목적1. 공부한 것 정리</h2><p>블로그를 이용해서 지금 하고있는 공부에 대한 정리를 하려고 합니다  </p>
-<p>이유는 나중에 오류 해결이나 사용법이 기억나지 않을 때 정리된 글을 보며 빠르게 떠올리기 위함입니다</p>
-<pre><code class="Python">print(&quot;hello world!&quot;)
-</code></pre>
-<h2 id="목적2-포트폴리오"><a href="#목적2-포트폴리오" class="headerlink" title="목적2. 포트폴리오"></a>목적2. 포트폴리오</h2><p>공부한 것 정리를 보여주며 이렇게 공부를 했고 </p>
-<p>내가 아는 지식이 어느정도인지 보여주기 위한 용도인 포트폴리오로도 사용하기 위함입니다. </p>
-<h2 id="사용된-블로그-플랫폼"><a href="#사용된-블로그-플랫폼" class="headerlink" title="사용된 블로그 플랫폼"></a>사용된 블로그 플랫폼</h2><p>해당 블로그는 hexo를 이용한 정적 페이지로 만들어졌고  </p>
-<p>해당 테마는 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>에 들어가시면 다운 받을 수 있습니다</p>
-<h4 id="해당-테마의-주요-기능"><a href="#해당-테마의-주요-기능" class="headerlink" title="해당 테마의 주요 기능:"></a>해당 테마의 주요 기능:</h4><ul>
-<li>검색은 기사 제목, 태그(#tag), 작성자(@author)를 지원합니다.</li>
-<li>패드&#x2F;휴대폰 및 기타 모바일 단말기 적응</li>
-<li>페이지 전역 단축키 3-hexo 단축키 설명</li>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Blind-SQL-Injection-이란"><a href="#Blind-SQL-Injection-이란" class="headerlink" title="Blind-SQL-Injection 이란?"></a>Blind-SQL-Injection 이란?</h2><p><strong>SQL Injection이 발생</strong> 하는 곳이면 <strong>거의 무조건 사용이 가능한 공격</strong> 입니다.</p>
+<p>대신 한글자씩 유추하여 알아내는 것이기 때문에 서버와 요청을 여러번 하는것이 필수입니다.</p>
+<p>그렇기에 파이썬이나 다양한 언어들로 매크로 프로그램을 만들거나 노가다를 합니다.</p>
+<h2 id="Blind-SQL-Injection-방법"><a href="#Blind-SQL-Injection-방법" class="headerlink" title="Blind-SQL-Injection 방법"></a>Blind-SQL-Injection 방법</h2><p>Blind-SQL-Injection을 사용하는 방법로는 다음과 같은 방법이 있습니다</p>
+<ul>
+<li>Boolean based (참과 거짓)</li>
+<li>Time based</li>
 </ul>
+<h2 id="Boolean-based"><a href="#Boolean-based" class="headerlink" title="Boolean based"></a>Boolean based</h2><p>서버와의 응답을 통해 <strong><code>HTML상에서 참과 거짓</code></strong> 이 다르게 오는 것을 알 수 있을 때 해당 HTML을 비교하며 한글자씩 시도해 보는 것입니다.</p>
+<h3 id="Boolean-based-공격-포맷-만들기"><a href="#Boolean-based-공격-포맷-만들기" class="headerlink" title="Boolean based 공격 포맷 만들기"></a>Boolean based 공격 포맷 만들기</h3><ol>
+<li><p>정령화된 형식<br><code>aaaa&#39; and (ascii(substr((____),1,1)) &gt; 0) and &#39;1&#39;=&#39;1</code><br>먼저 substr을 사용해서 (____)에 대해 1글자만 추출 할 수 있도록 하고 1글자에 대한 ascii값을 숫자와 비교해서 하나의 글자씩 확인 할 수 있습니다.</p>
+</li>
+<li><p>한 글자 찾기<br><code>aaaa&#39; and (ascii(substr((____),1,1)) &gt; 65) and &#39;1&#39;=&#39;1</code><br>1글자를 찾을 때 까지 ascii함수의 오른쪽 숫자를 증가 및 감소시켜 해당하는 ascii값을 찾습니다<br><img src="/image/Web-Hacking/SQL-Injection/09.png"></p>
+</li>
+<li><p>한 글자 유추 완료<br><code>aaaa&#39; and (ascii(substr((____),2,1)) &gt; 0) and &#39;1&#39;=&#39;1</code><br>1글자 유추가 완료되었다면 substr함수의 가운에의 숫자를 1에서 2로, 2에서 3으로 증가시켜 다음 글자를 찾습니다</p>
+</li>
+<li><p>마지막 글자는 0(NUL)으로 끝나고 나머지 찾았던 문자를 글자별로 이어주면 완성됩니다.<br>해당하는 방식대로 만든 Python 코드로 (____)에 select databse()를 넣어서 작동시키면 아래와 같이 실행됩니다.</p>
+</li>
+</ol>
+<p><img src="/image/Web-Hacking/SQL-Injection/10.png"></p>
+<h2 id="Time-based"><a href="#Time-based" class="headerlink" title="Time based"></a>Time based</h2><p>서버와의 응답에서 HTML만으로는 참과 거짓을 알 수 없을 때 SQL문에 <strong><code>딜레이를 주는 것으로 참 거짓</code></strong> 을 판별하여 데이터를 얻어내는 공격하는 기법 입니다.</p>
+<p>해당 공격으로는 아직 테스트 해보지 않아 사진을 첨부 할 수 없지만 마지막에 and sleep(5)를 넣어 참일 경우 딜레이를 주는 것으로 공격 포맷을 만듭니다.</p>
+<p><code>aaaa&#39; and (ascii(substr((____),1,1)) &gt; 0) and sleep(5)#</code></p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +774,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

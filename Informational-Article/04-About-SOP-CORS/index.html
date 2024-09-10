@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ForkGosu Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ForkGosu Blog">
+  <title>SOP, CORS란? | ForkGosu Blog</title>
+  <meta name="keywords" content=" informational , web ">
+  <meta name="description" content="SOP, CORS란? | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="자기소개기본 정보 이름 : 박진우출신 : 부산E-mail : &#x74;&#x72;&#101;&#101;&#54;&#x33;&#49;&#x36;&#x40;&#x6e;&#x61;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;포지션 : 모의 침투 테스터Links : Github, Blog  기술 스텍프로그래밍 언어 PythonPHP">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -647,18 +647,66 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="전체 화면 전환 단축 키 : s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Informational-Article/04-About-SOP-CORS" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4-%EB%AA%A9%EC%A0%81"><span class="toc-text">블로그 개설 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%811-%EA%B3%B5%EB%B6%80%ED%95%9C-%EA%B2%83-%EC%A0%95%EB%A6%AC"><span class="toc-text">목적1. 공부한 것 정리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%812-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"><span class="toc-text">목적2. 포트폴리오</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC"><span class="toc-text">사용된 블로그 플랫폼</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%95%B4%EB%8B%B9-%ED%85%8C%EB%A7%88%EC%9D%98-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5"><span class="toc-text">해당 테마의 주요 기능:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <h1 class="article-title">SOP, CORS란?</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="정보글">정보글</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">informational</a>
+            
+            <a class="color4">web</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-09-09 21:51:28'>2024-07-10 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SOP-CORS%EA%B0%80-%EC%83%9D%EA%B2%A8%EB%82%9C-%EC%9D%B4%EC%9C%A0"><span class="toc-text">SOP&#x2F;CORS가 생겨난 이유</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOP-Same-Origin-Policy"><span class="toc-text">SOP(Same-Origin-Policy)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CORS-Cross-Origin-Resource-Sharing"><span class="toc-text">CORS(Cross-Origin-Resource-Sharing)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CORS-Cross-Origin-Resource-Sharing-%EB%8F%99%EC%9E%91-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4"><span class="toc-text">CORS(Cross-Origin-Resource-Sharing) 동작 시나리오</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CORS-%EC%84%A4%EC%A0%95-%EC%82%AC%EC%A7%84"><span class="toc-text">CORS 설정 사진</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CORS-Cross-Origin-Resource-Sharing-%EC%84%A4%EC%A0%95"><span class="toc-text">CORS(Cross-Origin-Resource-Sharing) 설정</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CORS-%EB%AA%A8%EB%91%90-%EC%84%A4%EC%A0%95%EB%90%9C-%EC%82%AC%EC%A7%84"><span class="toc-text">CORS 모두 설정된 사진</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CORS-%EB%B3%B4%EC%95%88-%EB%B9%84%ED%95%98%EC%9D%B8%EB%93%9C"><span class="toc-text">CORS 보안 비하인드</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,23 +719,66 @@
     }
 </style>
 </div>
-            <h1 id="블로그-개설-목적"><a href="#블로그-개설-목적" class="headerlink" title="블로그 개설 목적"></a>블로그 개설 목적</h1><h2 id="목적1-공부한-것-정리"><a href="#목적1-공부한-것-정리" class="headerlink" title="목적1. 공부한 것 정리"></a>목적1. 공부한 것 정리</h2><p>블로그를 이용해서 지금 하고있는 공부에 대한 정리를 하려고 합니다  </p>
-<p>이유는 나중에 오류 해결이나 사용법이 기억나지 않을 때 정리된 글을 보며 빠르게 떠올리기 위함입니다</p>
-<pre><code class="Python">print(&quot;hello world!&quot;)
-</code></pre>
-<h2 id="목적2-포트폴리오"><a href="#목적2-포트폴리오" class="headerlink" title="목적2. 포트폴리오"></a>목적2. 포트폴리오</h2><p>공부한 것 정리를 보여주며 이렇게 공부를 했고 </p>
-<p>내가 아는 지식이 어느정도인지 보여주기 위한 용도인 포트폴리오로도 사용하기 위함입니다. </p>
-<h2 id="사용된-블로그-플랫폼"><a href="#사용된-블로그-플랫폼" class="headerlink" title="사용된 블로그 플랫폼"></a>사용된 블로그 플랫폼</h2><p>해당 블로그는 hexo를 이용한 정적 페이지로 만들어졌고  </p>
-<p>해당 테마는 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>에 들어가시면 다운 받을 수 있습니다</p>
-<h4 id="해당-테마의-주요-기능"><a href="#해당-테마의-주요-기능" class="headerlink" title="해당 테마의 주요 기능:"></a>해당 테마의 주요 기능:</h4><ul>
-<li>검색은 기사 제목, 태그(#tag), 작성자(@author)를 지원합니다.</li>
-<li>패드&#x2F;휴대폰 및 기타 모바일 단말기 적응</li>
-<li>페이지 전역 단축키 3-hexo 단축키 설명</li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="SOP-CORS가-생겨난-이유"><a href="#SOP-CORS가-생겨난-이유" class="headerlink" title="SOP&#x2F;CORS가 생겨난 이유"></a>SOP&#x2F;CORS가 생겨난 이유</h2><p>해커가 XSS 취약점이나 피싱사이트를 사용하여 다른 사이트에서 악성코드를 심은 뒤 사용자가 이를 클릭하면 서버로 강제적인 요청이 이루어지기 때문에 해당 요청이 <strong>사용자의 요청인지 악성코드의 요청인지 구분할 수 없기 때문에</strong> 이 점을 보안하기위해 만들어 진 것이 SOP&#x2F;CORS 라는 웹 보안 정책입니다 </p>
+<h2 id="SOP-Same-Origin-Policy"><a href="#SOP-Same-Origin-Policy" class="headerlink" title="SOP(Same-Origin-Policy)"></a>SOP(Same-Origin-Policy)</h2><p>브라우저가 웹 페이지에서 다른 출처(Origin)의 자원에 접근하지 못하도록 제한하는 강제적인 규칙이며</p>
+<p>출처(Origin)는 <code>Potocol</code> + <code>Domain</code> + <code>Port</code> 3가지가 모두 같으면 <code>Same-Origin</code>로 자바스크립트에서 리소스에 접근 할 수 있습니다</p>
+<p>만약 하나라도 다르면 <code>Cross-Origin</code>로 자바스크립트에서 다른 출처의 리소스에 접근하지 못하도록 제한합니다.</p>
+<p><img src="/image/Informational-Article/04.png"></p>
+<p>해당 규칙 덕분에 해커가 심어놓은 악성코드가 실행하여 개인 정보를 가로채는 것을 막을 수 있게 되었지만</p>
+<p>SOP정책으로 인해 웹 사이트의 확장성이 매우 떨어지게 되어 <code>Cross-Origin</code>일때도 다른 출처의 리소스에 접근 할 수 있도록 CORS라는 정책을 하나 더 만들게 됩니다.</p>
+<h2 id="CORS-Cross-Origin-Resource-Sharing"><a href="#CORS-Cross-Origin-Resource-Sharing" class="headerlink" title="CORS(Cross-Origin-Resource-Sharing)"></a>CORS(Cross-Origin-Resource-Sharing)</h2><p>몇 가지 규칙에 해당되면 다른 출처(Origin)에서도 자원에 대해 접근 할 수 있도록 허락하는 규칙입니다</p>
+<p>SOP가 무조건 허용 안되게 막는다면 CORS는 SOP에게 허락 할 목록들은 허용을 하게 해달라는 목록들을 적은 규칙입니다.</p>
+<p>서버에서 헤더에 <code>ACAO(Access-Control-Allow-Origin)</code>등 허용할 목록을 만들어서 설정합니다.</p>
+<h2 id="CORS-Cross-Origin-Resource-Sharing-동작-시나리오"><a href="#CORS-Cross-Origin-Resource-Sharing-동작-시나리오" class="headerlink" title="CORS(Cross-Origin-Resource-Sharing) 동작 시나리오"></a>CORS(Cross-Origin-Resource-Sharing) 동작 시나리오</h2><ol>
+<li><p>사용자의 브라우저는 요청 해더에 Origin이라는 필드에 어디에서 요청을 하는 지 담아서 전송합니다(만약 <code>Same-Origin</code>일 경우 헤더에 Origin필드는 보이지 않고 <code>Cross-Origin</code>일 때 보입니다.)</p>
+</li>
+<li><p>서버는 이 요청에 대한 응답 헤더에 <code>ACAO(Access-Control-Allow-Origin)</code>이라는 필드에 <code>허용된 출처</code>를 담아서 다시 사용자의 브라우저로 전송합니다.</p>
+</li>
+<li><p><strong>브라우저는 자신이 보냈던 요청 헤더의 Origin과 ACAO(Access-Control-Allow-Origin)를 비교</strong> 하여 자바스크립트에서 리소스를 접근을 허용 할 지 결정합니다.</p>
+</li>
+</ol>
+<h3 id="CORS-설정-사진"><a href="#CORS-설정-사진" class="headerlink" title="CORS 설정 사진"></a>CORS 설정 사진</h3><p><img src="/image/Informational-Article/29.png"></p>
+<h2 id="CORS-Cross-Origin-Resource-Sharing-설정"><a href="#CORS-Cross-Origin-Resource-Sharing-설정" class="headerlink" title="CORS(Cross-Origin-Resource-Sharing) 설정"></a>CORS(Cross-Origin-Resource-Sharing) 설정</h2><p>결국 SOP에 대한 허용을 위해 CORS를 사용하려면 설정이 필요하기 때문에 설정을 잘 하는 것이 중요합니다.</p>
+<p>설정은 허용할 리스트들을 적은 일종의 White List Filter 작업이라 볼 수 있습니다.</p>
+<ol>
+<li><p><code>ACAO(Access-Control-Allow-Origin)</code> : 와일드 카드(<code>*</code>)를 사용하여 모든 사이트를 허용 할 수 있지만 ACAC가 true일 경우 와일드 카드(<code>*</code>)사용이 불가능 합니다. (<code>*</code> 또는 <code>https://naver.com</code>처럼 사이트 주소)</p>
+</li>
+<li><p><code>ACRM(Access-Control-Request-Methods)</code> : 리소스 접근을 허용하는 HTTP메서드 지정합니다. (GET, POST, PUT, DELETE)</p>
+</li>
+<li><p><code>ACAH(Access-Control-Allow-Headers)</code> : 요청을 허용할 헤더를 지정합니다. (Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization)</p>
+</li>
+<li><p><code>ACAC(Access-Control-Allow-Credentials)</code> : 클라이언트 요청에서 자격증명(쿠키,HTTP 인증 정보, TLS 클라이언트 인증서)을 포함 해야하는 경우 true를 사용합니다.</p>
+</li>
+<li><p><code>ACMA(Access-Control-Max-Age)</code> : 서버에 요청하기 전에 요청이 유효한지 확인하기 위해 <code>OPTIONS</code> 메서드로 예비 요청을 보내 Preflight 요청을 캐싱 시켜 최적화합니다. (1당 1초)</p>
+</li>
+<li><p><code>ACEH(Access-Control-Expose-Headers)</code> : 기본적으로 브라우저에게 노출이 되지 않지만, 브라우저 측에서 접근할 수 있게 허용해주는 헤더를 지정 합니다. (Content-Length)</p>
+</li>
+</ol>
+<h3 id="CORS-모두-설정된-사진"><a href="#CORS-모두-설정된-사진" class="headerlink" title="CORS 모두 설정된 사진"></a>CORS 모두 설정된 사진</h3><p><img src="/image/Informational-Article/30.png"></p>
+<h2 id="CORS-보안-비하인드"><a href="#CORS-보안-비하인드" class="headerlink" title="CORS 보안 비하인드"></a>CORS 보안 비하인드</h2><p>개발자들이 CORS설정을 매번 하는 것이 귀찮아서 처음에 다 열어 두기 위해 ACAO에 와일드 카드(<code>*</code>)를 쓰기 시작하자 브라우저 보안은 이건 아니라 생각 하였습니다.</p>
+<p>그래서 브라우저 보안은 타 도메인에서 쿠키를 포함해서 요청하는 것에 대한 응답은 ACAC를 만들어서 true일 때만 가능하게 만든 후 ACAC가 true일 때는 ACAO에 와일드 카드(<code>*</code>)를 사용하지 못하게 하였습니다.</p>
+<p>하지만 몇몇 개발자들은 그냥 요청 받은 Origin을 ACAO에 넣어버린 뒤 브라우저에 전송해버리는 것으로 와일드 카드(<code>*</code>)대신 사용해 버렸습니다.</p>
+<p>해당 방식으로 만든 웹 사이트는 취약한 CORS에 속하며 이처럼 CORS 설정이 올바르게 설정되어 있지 않다면 모의해킹 시 보고하는것도 중요합니다.</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +787,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

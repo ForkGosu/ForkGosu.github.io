@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ForkGosu Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ForkGosu Blog">
+  <title>CSP(Content-Securiy-Policy)란? | ForkGosu Blog</title>
+  <meta name="keywords" content=" informational , web ">
+  <meta name="description" content="CSP(Content-Securiy-Policy)란? | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="자기소개기본 정보 이름 : 박진우출신 : 부산E-mail : &#x74;&#x72;&#101;&#101;&#54;&#x33;&#49;&#x36;&#x40;&#x6e;&#x61;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;포지션 : 모의 침투 테스터Links : Github, Blog  기술 스텍프로그래밍 언어 PythonPHP">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -647,18 +647,66 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="전체 화면 전환 단축 키 : s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Informational-Article/05-About-CSP" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4-%EB%AA%A9%EC%A0%81"><span class="toc-text">블로그 개설 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%811-%EA%B3%B5%EB%B6%80%ED%95%9C-%EA%B2%83-%EC%A0%95%EB%A6%AC"><span class="toc-text">목적1. 공부한 것 정리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%812-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"><span class="toc-text">목적2. 포트폴리오</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC"><span class="toc-text">사용된 블로그 플랫폼</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%95%B4%EB%8B%B9-%ED%85%8C%EB%A7%88%EC%9D%98-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5"><span class="toc-text">해당 테마의 주요 기능:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <h1 class="article-title">CSP(Content-Securiy-Policy)란?</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="정보글">정보글</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">informational</a>
+            
+            <a class="color4">web</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-09-10 19:09:01'>2024-08-21 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSP-Content-Securiy-Policy-%EA%B0%80-%EC%83%9D%EA%B2%A8%EB%82%9C-%EC%9D%B4%EC%9C%A0"><span class="toc-text">CSP(Content-Securiy-Policy)가 생겨난 이유</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSP-Content-Securiy-Policy-%EC%A7%80%EC%8B%9C%EC%96%B4"><span class="toc-text">CSP(Content-Securiy-Policy) 지시어</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%A3%BC%EC%9A%94-%EC%A7%80%EC%8B%9C%EC%96%B4-src"><span class="toc-text">주요 지시어(src)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B7%B8-%EC%99%B8-%EC%A7%80%EC%8B%9C%EC%96%B4"><span class="toc-text">그 외 지시어</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSP-Content-Securiy-Policy-%EC%A3%BC%EC%9A%94-%ED%82%A4%EC%9B%8C%EB%93%9C-%EC%A2%85%EB%A5%98"><span class="toc-text">CSP(Content-Securiy-Policy) 주요 키워드 종류</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS%EB%A5%BC-%EB%A7%89%EA%B8%B0%EC%9C%84%ED%95%9C-CSP-%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95"><span class="toc-text">XSS를 막기위한 CSP 기본 사용 방법</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%91%90%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95-%EC%B0%A8%EC%9D%B4%EC%A0%90"><span class="toc-text">두가지 방법 차이점</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSP-%EC%84%A4%EC%A0%95-%EC%84%A4%EB%AA%85"><span class="toc-text">CSP 설정 설명</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,23 +719,62 @@
     }
 </style>
 </div>
-            <h1 id="블로그-개설-목적"><a href="#블로그-개설-목적" class="headerlink" title="블로그 개설 목적"></a>블로그 개설 목적</h1><h2 id="목적1-공부한-것-정리"><a href="#목적1-공부한-것-정리" class="headerlink" title="목적1. 공부한 것 정리"></a>목적1. 공부한 것 정리</h2><p>블로그를 이용해서 지금 하고있는 공부에 대한 정리를 하려고 합니다  </p>
-<p>이유는 나중에 오류 해결이나 사용법이 기억나지 않을 때 정리된 글을 보며 빠르게 떠올리기 위함입니다</p>
-<pre><code class="Python">print(&quot;hello world!&quot;)
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSP-Content-Securiy-Policy-가-생겨난-이유"><a href="#CSP-Content-Securiy-Policy-가-생겨난-이유" class="headerlink" title="CSP(Content-Securiy-Policy)가 생겨난 이유"></a>CSP(Content-Securiy-Policy)가 생겨난 이유</h2><p>SOP&#x2F;CORS는 자바스크립트가 리소스에 접근하지 못하게 하기위해 만들었다면 CSP(Content-Securiy-Policy)는 HTML태그를 삽입해 스크립트와 같은 실행을 막기 위해 만들어졌습니다.</p>
+<p>만약 HTML상에 데이터를 삽입하는 종류의 공격이 발생하였을 때 피해를 줄이고 웹 관리자가 공격 시도를 보고받을 수 있도록 하기 위함입니다.</p>
+<h2 id="CSP-Content-Securiy-Policy-지시어"><a href="#CSP-Content-Securiy-Policy-지시어" class="headerlink" title="CSP(Content-Securiy-Policy) 지시어"></a>CSP(Content-Securiy-Policy) 지시어</h2><p>CSP의 지시어는 웹 애플리케이션에서 다양한 리소스(스크립트, 스타일, 이미지 등)의 로드를 제어하기 위해 사용됩니다.</p>
+<p>지시어는 각각의 리소스에 대해 허용할지 설정하고, 세미콜론(<code>;</code>)을 이용하여 지시어를 나눌 수 있습니다.</p>
+<h3 id="주요-지시어-src"><a href="#주요-지시어-src" class="headerlink" title="주요 지시어(src)"></a>주요 지시어(src)</h3><ol>
+<li><code>default-src</code> : CSP에 사용되는 모든 유형의 리소스에 대한 기본으로 출처를 설정합니다.</li>
+<li><code>script-src</code> : 자바스크립트의 출처를 설정합니다.</li>
+<li><code>style-src</code> : CSS의 출처를 설정합니다.</li>
+<li><code>img-src</code> : 이미지의 출처를 설정합니다.</li>
+<li><code>font-src</code> : 폰트의 출처를 설정합니다.</li>
+</ol>
+<p><code>connect-src</code> : XMLHttpRequest, Fetch API, WebSocket, EventSource와 같은 네트워크 요청의 출처를 설정합니다.<br><code>object-src</code> : <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;applet&gt;</code> 태그에서 사용하는 리소스의 출처를 설정합니다.<br><code>media-src</code> : 오디오 및 비디오 파일의 출처를 설정합니다.<br><code>frame-src</code> : <code>&lt;iframe&gt;</code> 및 <code>&lt;frame&gt;</code>에서 로드하는 리소스의 출처를 설정합니다.<br><code>worker-src</code> : Web Workers와 Shared Workers에서 사용하는 리소스의 출처를 설정합니다.<br><code>manifest-src</code> : 웹 애플리케이션 매니페스트 파일의 출처를 설정합니다.</p>
+<h3 id="그-외-지시어"><a href="#그-외-지시어" class="headerlink" title="그 외 지시어"></a>그 외 지시어</h3><p><code>report-uri</code> : CSP 위반이 발생했을 때, 이를 서버로 보고할 URL을 정의합니다.<br><code>base-uri</code> : HTML의 <code>&lt;base&gt;</code> 태그에서 사용하는 URI의 출처를 정의합니다.<br><code>form-action</code> : <code>&lt;form&gt;</code> 태그에서 action 으로 제출 될 때, 어느 도메인으로 데이터를 전송할 수 있는지 정의합니다.<br><code>frame-ancestors</code> : 현재 페이지가 어떤 도메인에서 <code>&lt;frame&gt;</code>이나 <code>&lt;iframe&gt;</code>으로 삽입될지 제어합니다.(클릭재킹 방지)<br><code>upgrade-insecure-requests</code> : 페이지에 있는 HTTP 리소스를 자동으로 HTTPS로 업그레이드합니다.<br><code>block-all-mixed-content</code> : HTTPS 페이지에서 HTTP 리소스(혼합 콘텐츠)의 로드를 완전히 차단합니다.</p>
+<h2 id="CSP-Content-Securiy-Policy-주요-키워드-종류"><a href="#CSP-Content-Securiy-Policy-주요-키워드-종류" class="headerlink" title="CSP(Content-Securiy-Policy) 주요 키워드 종류"></a>CSP(Content-Securiy-Policy) 주요 키워드 종류</h2><p><code>&#39;self&#39;</code> : 현재 출처에서만 리소스를 허용합니다.<br><code>&#39;none&#39;</code> : 해당 리소스 유형을 차단합니다.<br><code>&#39;unsafe-inline&#39;</code> : 인라인 스크립트나 스타일 허용합니다.<br><code>&#39;unsafe-eval&#39;</code> : eval() 등 위험한 자바스크립트 실행 허용합니다.<br><code>&#39;strict-dynamic&#39;</code> : 동적 스크립트 로드에 대한 신뢰 상속합니다.<br><code>&#39;nonce-&#123;value&#125;&#39;</code> : 특정 nonce 값을 가진 스크립트만 허용합니다.<br><code>&#39;sha256-&#123;hash&#125;&#39;</code> : 특정 해시 값을 가진 스크립트만 허용합니다.<br><code>도메인 지정</code> : 특정 도메인에서만 리소스를 로드 허용합니다.<br><code>https:</code> : HTTPS를 사용하는 모든 출처에서 리소스를 허용합니다.<br><code>http:</code> : HTTP를 사용하는 모든 출처에서 리소스를 허용합니다.<br><code>data:</code> : 스키마를 사용하여 인라인으로 리소스를 직접 포함할 수 있습니다.<br><code>blob:</code> : Blob URL로 생성된 리소스를 허용합니다.<br><code>*</code> : 모든 출처에서 리소스를 허용합니다.</p>
+<h2 id="XSS를-막기위한-CSP-기본-사용-방법"><a href="#XSS를-막기위한-CSP-기본-사용-방법" class="headerlink" title="XSS를 막기위한 CSP 기본 사용 방법"></a>XSS를 막기위한 CSP 기본 사용 방법</h2><p>XSS를 방지하기위해 CSP로 script-src를 사용하여 차단하는 방법을 알려드리겠습니다.</p>
+<p>두가지 방법이 있습니다.</p>
+<ol>
+<li>서버언어로 설정하는 방법(예시는 PHP로 들겠습니다)</li>
+</ol>
+<pre><code class="HTML">&lt;?php $nonce = hash(&#39;sha256&#39;, microtime()); 
+header(&quot;Content-Security-Policy: script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;nonce-&#123;$nonce&#125;&#39; &#39;strict-dynamic&#39;;&quot;); ?&gt;
+&lt;script nonce=&quot;&lt;?=$nonce?&gt;&quot;&gt;alert(1);&lt;/script&gt;
 </code></pre>
-<h2 id="목적2-포트폴리오"><a href="#목적2-포트폴리오" class="headerlink" title="목적2. 포트폴리오"></a>목적2. 포트폴리오</h2><p>공부한 것 정리를 보여주며 이렇게 공부를 했고 </p>
-<p>내가 아는 지식이 어느정도인지 보여주기 위한 용도인 포트폴리오로도 사용하기 위함입니다. </p>
-<h2 id="사용된-블로그-플랫폼"><a href="#사용된-블로그-플랫폼" class="headerlink" title="사용된 블로그 플랫폼"></a>사용된 블로그 플랫폼</h2><p>해당 블로그는 hexo를 이용한 정적 페이지로 만들어졌고  </p>
-<p>해당 테마는 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>에 들어가시면 다운 받을 수 있습니다</p>
-<h4 id="해당-테마의-주요-기능"><a href="#해당-테마의-주요-기능" class="headerlink" title="해당 테마의 주요 기능:"></a>해당 테마의 주요 기능:</h4><ul>
-<li>검색은 기사 제목, 태그(#tag), 작성자(@author)를 지원합니다.</li>
-<li>패드&#x2F;휴대폰 및 기타 모바일 단말기 적응</li>
-<li>페이지 전역 단축키 3-hexo 단축키 설명</li>
-</ul>
+<ol start="2">
+<li>메타태그로 설정하는 방법</li>
+</ol>
+<pre><code class="HTML">&lt;?php $nonce = hash(&#39;sha256&#39;, microtime()); ?&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;nonce-&lt;?=$nonce?&gt;&#39; &#39;strict-dynamic&#39;;&quot;&gt;
+&lt;script nonce=&quot;&lt;?=$nonce?&gt;&quot;&gt;alert(1);&lt;/script&gt;
+</code></pre>
+<h3 id="두가지-방법-차이점"><a href="#두가지-방법-차이점" class="headerlink" title="두가지 방법 차이점"></a>두가지 방법 차이점</h3><p>서버언어로 CSP를 설정할 시 HTTP 헤더에 포함되어 있습니다.<br><img src="/image/Informational-Article/31.png"></p>
+<p>메타태그로 CSP를 설정할 시 HTTP 헤더에 없습니다.<br><img src="/image/Informational-Article/32.png"></p>
+<h3 id="CSP-설정-설명"><a href="#CSP-설정-설명" class="headerlink" title="CSP 설정 설명"></a>CSP 설정 설명</h3><p>일단 지시어는 <code>script-src</code>하나만 사용 하였으며 키워드로는 <code>&#39;self&#39;</code>, <code>&#39;unsafe-inline&#39;</code>, <code>&#39;nonce-hash&#39;</code>, <code>&#39;strict-dynamic&#39;</code>를 사용하였습니다.</p>
+<p><code>script-src</code>는 자바스크립트의 출처를 설정하기 위해 지시어로 사용하였고 키워드도 하나씩 살펴보겠습니다.</p>
+<p><code>&#39;self&#39;</code>를 사용하여 현재 출처에서만 script를 허용합니다.<br><code>&#39;unsafe-inline&#39;</code>를 사용하여 인라인으로 된 스크립트의 사용을 허용합니다.<br><code>&#39;nonce-hash&#39;</code>를 사용한 이유는 <code>&#39;unsafe-inline&#39;</code>와 <code>&#39;strict-dynamic&#39;</code>를 사용하면 CSP가 스크립트의 출처를 엄격하게 보기 때문에 <code>nonce</code>설정을 한 특정 스크립트에만 실행되게 허용합니다.<br><code>&#39;strict-dynamic&#39;</code>를 사용하여 동적으로 생성되는 스크립트에 대해 신뢰하여 개발 시 좀 더 유연한 개발을 할수 있게 허용합니다.</p>
+<p>이렇게 CSP설정 하면 <code>&lt;script&gt;</code>사용 시 <code>&lt;script nonce=&quot;&lt;?=$nonce?&gt;&quot;&gt;alert(1);&lt;/script&gt;</code>이렇게 <code>nonce</code>설정을 해줘야 합니다.</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +783,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

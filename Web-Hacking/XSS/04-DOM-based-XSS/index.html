@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ForkGosu Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ForkGosu Blog">
+  <title>DOM based XSS란? | ForkGosu Blog</title>
+  <meta name="keywords" content=" web-hacking , hacking , xss , dom-based-xss ">
+  <meta name="description" content="DOM based XSS란? | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="자기소개기본 정보 이름 : 박진우출신 : 부산E-mail : &#x74;&#x72;&#101;&#101;&#54;&#x33;&#49;&#x36;&#x40;&#x6e;&#x61;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;포지션 : 모의 침투 테스터Links : Github, Blog  기술 스텍프로그래밍 언어 PythonPHP">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -647,18 +647,72 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="전체 화면 전환 단축 키 : s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Web-Hacking/XSS/04-DOM-based-XSS" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4-%EB%AA%A9%EC%A0%81"><span class="toc-text">블로그 개설 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%811-%EA%B3%B5%EB%B6%80%ED%95%9C-%EA%B2%83-%EC%A0%95%EB%A6%AC"><span class="toc-text">목적1. 공부한 것 정리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%812-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"><span class="toc-text">목적2. 포트폴리오</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC"><span class="toc-text">사용된 블로그 플랫폼</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%95%B4%EB%8B%B9-%ED%85%8C%EB%A7%88%EC%9D%98-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5"><span class="toc-text">해당 테마의 주요 기능:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <h1 class="article-title">DOM based XSS란?</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="웹-해킹">웹-해킹</a> > 
+            
+            <a  data-rel="웹-해킹&lt;---&gt;XSS">XSS</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">web-hacking</a>
+            
+            <a class="color3">hacking</a>
+            
+            <a class="color4">xss</a>
+            
+            <a class="color4">dom-based-xss</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-09-10 10:37:54'>2024-06-23 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM-based-XSS%EB%9E%80"><span class="toc-text">DOM based XSS란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM-based-XSS%EC%9D%98-%EC%9B%90%EB%A6%AC"><span class="toc-text">DOM based XSS의 원리</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,23 +725,51 @@
     }
 </style>
 </div>
-            <h1 id="블로그-개설-목적"><a href="#블로그-개설-목적" class="headerlink" title="블로그 개설 목적"></a>블로그 개설 목적</h1><h2 id="목적1-공부한-것-정리"><a href="#목적1-공부한-것-정리" class="headerlink" title="목적1. 공부한 것 정리"></a>목적1. 공부한 것 정리</h2><p>블로그를 이용해서 지금 하고있는 공부에 대한 정리를 하려고 합니다  </p>
-<p>이유는 나중에 오류 해결이나 사용법이 기억나지 않을 때 정리된 글을 보며 빠르게 떠올리기 위함입니다</p>
-<pre><code class="Python">print(&quot;hello world!&quot;)
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="DOM-based-XSS란"><a href="#DOM-based-XSS란" class="headerlink" title="DOM based XSS란?"></a>DOM based XSS란?</h2><p>DOM XSS란 웹에서 JavaScript코드로 DOM(Document Object Model)객체를 제어할 때 악성 스크립트를 삽입하는 것을 말합니다.</p>
+<p>Javascript로 HTML상에 악성 스크립트를 삽입하기 때문에 HTML상에서 안보일 수도 있으며 또 어떻게 조합되는지 직접 확인해봐야 하기 때문에 취약점을 찾기가 쉽지않습니다.</p>
+<h2 id="DOM-based-XSS의-원리"><a href="#DOM-based-XSS의-원리" class="headerlink" title="DOM based XSS의 원리"></a>DOM based XSS의 원리</h2><p>검색이나 아이디 검사 시에 값을 반환하는 곳에 스크립트를 작성 하면 서버언어는 그대로 사용자가 적은 값을 가져와서 HTML상에 보여주었을 때 해당 스크립트가 브라우저에서 실행됩니다.</p>
+<p>다음은 예시 입니다</p>
+<ol>
+<li>다음과 같은 취약한 javascript 코드가 작성된 서버가 있다고 가정을 합니다.</li>
+</ol>
+<pre><code class="HTML">&lt;script type=&quot;text/javascript&quot;&gt;
+    const hash = location.hash.slice(1);
+    if (hash) &#123;
+        location.href = decodeURIComponent(hash);
+    &#125;
+    addEventListener(&#39;hashchange&#39;, function () &#123;
+        location.href = decodeURIComponent(location.hash.slice(1));
+    &#125;);
+&lt;/script&gt;
 </code></pre>
-<h2 id="목적2-포트폴리오"><a href="#목적2-포트폴리오" class="headerlink" title="목적2. 포트폴리오"></a>목적2. 포트폴리오</h2><p>공부한 것 정리를 보여주며 이렇게 공부를 했고 </p>
-<p>내가 아는 지식이 어느정도인지 보여주기 위한 용도인 포트폴리오로도 사용하기 위함입니다. </p>
-<h2 id="사용된-블로그-플랫폼"><a href="#사용된-블로그-플랫폼" class="headerlink" title="사용된 블로그 플랫폼"></a>사용된 블로그 플랫폼</h2><p>해당 블로그는 hexo를 이용한 정적 페이지로 만들어졌고  </p>
-<p>해당 테마는 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>에 들어가시면 다운 받을 수 있습니다</p>
-<h4 id="해당-테마의-주요-기능"><a href="#해당-테마의-주요-기능" class="headerlink" title="해당 테마의 주요 기능:"></a>해당 테마의 주요 기능:</h4><ul>
-<li>검색은 기사 제목, 태그(#tag), 작성자(@author)를 지원합니다.</li>
-<li>패드&#x2F;휴대폰 및 기타 모바일 단말기 적응</li>
-<li>페이지 전역 단축키 3-hexo 단축키 설명</li>
-</ul>
+<ol start="2">
+<li><p>url의 프래그먼트 식별자에 <code>javascript:alert(&#39;XSS&#39;)</code>를 넣어서 접속하면 스크립트가 실행되게 됩니다.<br><img src="/image/Web-Hacking/XSS/11.png"></p>
+</li>
+<li><p>그리고 해당 DOM base XSS는 Burp Suite에서 Response에 스크립트가 보이지 않는 것을 확인 할 수 있습니다.<br><img src="/image/Web-Hacking/XSS/12.png"></p>
+</li>
+<li><p>혹시나 싶어서 브라우저에서 제공되는 개발자 모드의 HTML도 확인해봤지만 보이지 않습니다.(보일 때도 있지만 이처럼 보이지 않을 수도 있습니다.)<br><img src="/image/Web-Hacking/XSS/13.png"></p>
+</li>
+</ol>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +778,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

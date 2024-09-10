@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ForkGosu Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ForkGosu Blog">
+  <title>XSS(Cross Site Scripting)란? | ForkGosu Blog</title>
+  <meta name="keywords" content=" web-hacking , hacking , xss ">
+  <meta name="description" content="XSS(Cross Site Scripting)란? | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="자기소개기본 정보 이름 : 박진우출신 : 부산E-mail : &#x74;&#x72;&#101;&#101;&#54;&#x33;&#49;&#x36;&#x40;&#x6e;&#x61;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;포지션 : 모의 침투 테스터Links : Github, Blog  기술 스텍프로그래밍 언어 PythonPHP">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -647,18 +647,70 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="전체 화면 전환 단축 키 : s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Web-Hacking/XSS/01-XSS" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4-%EB%AA%A9%EC%A0%81"><span class="toc-text">블로그 개설 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%811-%EA%B3%B5%EB%B6%80%ED%95%9C-%EA%B2%83-%EC%A0%95%EB%A6%AC"><span class="toc-text">목적1. 공부한 것 정리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%812-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"><span class="toc-text">목적2. 포트폴리오</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC"><span class="toc-text">사용된 블로그 플랫폼</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%95%B4%EB%8B%B9-%ED%85%8C%EB%A7%88%EC%9D%98-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5"><span class="toc-text">해당 테마의 주요 기능:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <h1 class="article-title">XSS(Cross Site Scripting)란?</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="웹-해킹">웹-해킹</a> > 
+            
+            <a  data-rel="웹-해킹&lt;---&gt;XSS">XSS</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">web-hacking</a>
+            
+            <a class="color3">hacking</a>
+            
+            <a class="color4">xss</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-09-10 19:35:16'>2024-06-16 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS-Cross-Site-Scripting-%EB%9E%80"><span class="toc-text">XSS(Cross Site Scripting)란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%8A%B9%EC%A7%95"><span class="toc-text">특징</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A2%85%EB%A5%98"><span class="toc-text">종류</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B3%B5%EA%B2%A9"><span class="toc-text">가능한 공격</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POC-Proof-of-Concept-%EC%BD%94%EB%93%9C"><span class="toc-text">POC(Proof of Concept) 코드</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS-%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%84-%EB%B9%A0%EB%A5%B4%EA%B2%8C-%EC%B0%BE%EC%9D%84-%EB%95%8C-%ED%99%95%EC%9D%B8-%EC%82%AC%ED%95%AD"><span class="toc-text">XSS 취약점을 빠르게 찾을 때 확인 사항</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS-%EB%A7%89%EB%8A%94-%EB%B0%A9%EB%B2%95"><span class="toc-text">XSS 막는 방법</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-Entity%EB%A1%9C-%EC%B9%98%ED%99%98"><span class="toc-text">HTML Entity로 치환</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HttpOnly-%EC%84%A4%EC%A0%95"><span class="toc-text">HttpOnly 설정</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,23 +723,74 @@
     }
 </style>
 </div>
-            <h1 id="블로그-개설-목적"><a href="#블로그-개설-목적" class="headerlink" title="블로그 개설 목적"></a>블로그 개설 목적</h1><h2 id="목적1-공부한-것-정리"><a href="#목적1-공부한-것-정리" class="headerlink" title="목적1. 공부한 것 정리"></a>목적1. 공부한 것 정리</h2><p>블로그를 이용해서 지금 하고있는 공부에 대한 정리를 하려고 합니다  </p>
-<p>이유는 나중에 오류 해결이나 사용법이 기억나지 않을 때 정리된 글을 보며 빠르게 떠올리기 위함입니다</p>
-<pre><code class="Python">print(&quot;hello world!&quot;)
-</code></pre>
-<h2 id="목적2-포트폴리오"><a href="#목적2-포트폴리오" class="headerlink" title="목적2. 포트폴리오"></a>목적2. 포트폴리오</h2><p>공부한 것 정리를 보여주며 이렇게 공부를 했고 </p>
-<p>내가 아는 지식이 어느정도인지 보여주기 위한 용도인 포트폴리오로도 사용하기 위함입니다. </p>
-<h2 id="사용된-블로그-플랫폼"><a href="#사용된-블로그-플랫폼" class="headerlink" title="사용된 블로그 플랫폼"></a>사용된 블로그 플랫폼</h2><p>해당 블로그는 hexo를 이용한 정적 페이지로 만들어졌고  </p>
-<p>해당 테마는 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>에 들어가시면 다운 받을 수 있습니다</p>
-<h4 id="해당-테마의-주요-기능"><a href="#해당-테마의-주요-기능" class="headerlink" title="해당 테마의 주요 기능:"></a>해당 테마의 주요 기능:</h4><ul>
-<li>검색은 기사 제목, 태그(#tag), 작성자(@author)를 지원합니다.</li>
-<li>패드&#x2F;휴대폰 및 기타 모바일 단말기 적응</li>
-<li>페이지 전역 단축키 3-hexo 단축키 설명</li>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="XSS-Cross-Site-Scripting-란"><a href="#XSS-Cross-Site-Scripting-란" class="headerlink" title="XSS(Cross Site Scripting)란?"></a>XSS(Cross Site Scripting)란?</h2><p>스크립트를 실행 할 수 있는 코드를 다른 사용자의 브라우저에서 실행를 실행시키는 것입니다</p>
+<p>클라이언트에서 스크립트를 삽입해서 공격하는 기법을 <strong>크사 또는 크스스라고 불립니다</strong></p>
+<p>오픈소스 웹 애플리케이션 보안 프로젝트 OWASP 2021 TOP 10에 있는 Injection에 포함되어 3번째로 위험한 취약점입니다.</p>
+<h2 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h2><p>서버를 사용하는 사용자를 공격하는 것이 XSS의 특징입니다</p>
+<h2 id="종류"><a href="#종류" class="headerlink" title="종류"></a>종류</h2><p>XSS의 종류는 크게 3가지로 나뉩니다<br>Stored XSS : 서버에 저장될 수 있는 곳에 XSS를 삽입 (<a href="../02-Stored-XSS">자세히 보기</a>)<br>Reflected XSS : URL에 GET 파라미터를 통해 XSS를 삽입 (<a href="../03-Reflected-XSS">자세히 보기</a>)<br>DOM based XSS : JS가 DOM 객체를 제어하는 곳에 XSS를 삽입 (<a href="../04-DOM-based-XSS">자세히 보기</a>)</p>
+<h2 id="가능한-공격"><a href="#가능한-공격" class="headerlink" title="가능한 공격"></a>가능한 공격</h2><p><strong>세션 하이재킹(Session Hijacking)</strong><br>주로 인증 및 로그인된 사용자 계정이 저장된 세션 ID를 무단으로 탈취하여 신원을 훔치거나 추가공격을 위해 사용됩니다.</p>
+<p><strong>키 로거(Key Logger)</strong><br>웹 페이지에 숨어 있다가 사용자가 입력한 키 값을 공격자 컴퓨터로 전송받아 비밀번호 평문이나 민감한 개인정보를 가져가기위해 사용됩니다.</p>
+<p><strong>마우스 스니퍼(Mouse Sniffer)</strong><br>키 로거(Key Logger)를 막기 위해 마우스를 통해 특정 번호를 입력하는 정보(마우스의 위치 x,y값)를 가져가기위해 사용됩니다.</p>
+<p><strong>거짓 정보 추가</strong><br>사용자가 보여지는 페이지를 수정해서 보여줄 수 있고 피싱 사이트 처럼 만들고 사용할 수 있습니다.</p>
+<p><strong>악성 스크립트 유포</strong><br>사용자에게 악의적인 목적으로 만들어진 모든 코드를 유포 할 수 있습니다. </p>
+<h2 id="POC-Proof-of-Concept-코드"><a href="#POC-Proof-of-Concept-코드" class="headerlink" title="POC(Proof of Concept) 코드"></a>POC(Proof of Concept) 코드</h2><p>모의해킹 업무에서는 직접적인 공격을 하면 절때 안됩니다<br>하지만 취약점을 이용한 공격이 가능함을 보여줘야하기 때문에 <strong>증명 코드</strong> 를 삽입해서 보여줍니다<br>그래서 alert(), prompt(), confirm() 등 알림창만 띄우는 증명코드를 POC코드라고 합니다</p>
+<h2 id="XSS-취약점을-빠르게-찾을-때-확인-사항"><a href="#XSS-취약점을-빠르게-찾을-때-확인-사항" class="headerlink" title="XSS 취약점을 빠르게 찾을 때 확인 사항"></a>XSS 취약점을 빠르게 찾을 때 확인 사항</h2><p>조건 : <code>&lt;&#39;&quot;&gt;</code> 가 입력 되어야 합니다(HTML Entity 되는 곳은 빠르게 넘어가는 것을 추천)</p>
+<ol>
+<li>Stored</li>
+</ol>
+<ul>
+<li>글을 저장되기 전에 HTML Entity로 치환 되는지 확인(Request할 때 치환 되는지 확인)</li>
+<li>글이 저장된 후 HTML Entity로 치환 되는지 확인</li>
 </ul>
+<ol start="2">
+<li>Reflected</li>
+</ol>
+<ul>
+<li>입력된 값(파라미터)이 HTML상에 표시되는지 확인(alert도 확인)</li>
+<li>파라미터의 방식을 POST -&gt; GET 방식으로 변경 후 정상으로 파라미터가 받아지는지 확인</li>
+<li>GET 파라미터가 HTML Entity로 치환 되는지 확인(Request할 때 치환 되는지 확인)</li>
+</ul>
+<h2 id="XSS-막는-방법"><a href="#XSS-막는-방법" class="headerlink" title="XSS 막는 방법"></a>XSS 막는 방법</h2><p>막는 방법로는 다음과 같은 방법이 있습니다</p>
+<ul>
+<li>HTML Entity로 치환</li>
+<li>HttpOnly 설정</li>
+</ul>
+<h3 id="HTML-Entity로-치환"><a href="#HTML-Entity로-치환" class="headerlink" title="HTML Entity로 치환"></a>HTML Entity로 치환</h3><p>무작정 블랙 리스트 필터링으로 XSS에서 사용되는 <code>&lt;</code>,<code>&#39;</code>,<code>&quot;</code>,<code>&gt;</code>를 삭제 해버린다면 자신이 쓴 글자가 HTML상에서 사라져서 사용자들이 당황스러워 할 것입니다</p>
+<p>그래서 HTML Entity로 <code>&lt;</code>,<code>&#39;</code>,<code>&quot;</code>,<code>&gt;</code>에 해당하는 단어를 <code>&amp;it;</code>,<code>&amp;gt;</code>,<code>&amp;it;</code>,<code>&amp;it;</code>로 치환해 준다면 HTML상에 글자가 사라지지 않고 XSS를 예방 할 수 있습니다</p>
+<p>만약 HTML Editor를 사용중 이라면 복잡하지만 다음 단계를 따르면 XSS를 예방 할 수 있습니다</p>
+<ol>
+<li>사용자가 입력한 파라미터에서 HTML 특수문자들을 전부 HTML Entity로 치환합니다</li>
+<li>허용할 tag를 식별하고 다시 살립니다(화이트 리스트 기반)<ul>
+<li>img, a, h1, h2…</li>
+</ul>
+</li>
+<li>다시 살려준 tag 내에 악의적인 Event Handler들을 필터링 합니다(블랙 리스트 기반)<ul>
+<li>onerror…</li>
+</ul>
+</li>
+</ol>
+<h3 id="HttpOnly-설정"><a href="#HttpOnly-설정" class="headerlink" title="HttpOnly 설정"></a>HttpOnly 설정</h3><p>HttpOnly는 document.cookie API에 접근을 차단하여 <strong>세션 및 쿠키 탈취를 방지</strong>하기 위한 설정입니다.</p>
+<p>하지만 해당 방법으로는 XSS에 대해 근본적으로는 막을 수 없기에 HTML Entity로 치환하는 방법이 가장 효과적입니다.</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +799,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

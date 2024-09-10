@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ForkGosu Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ForkGosu Blog">
+  <title>WEB, WAS, DB 관계 | ForkGosu Blog</title>
+  <meta name="keywords" content=" informational , web ">
+  <meta name="description" content="WEB, WAS, DB 관계 | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="자기소개기본 정보 이름 : 박진우출신 : 부산E-mail : &#x74;&#x72;&#101;&#101;&#54;&#x33;&#49;&#x36;&#x40;&#x6e;&#x61;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;포지션 : 모의 침투 테스터Links : Github, Blog  기술 스텍프로그래밍 언어 PythonPHP">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -647,18 +647,66 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="전체 화면 전환 단축 키 : s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Informational-Article/01-About-WEB-WAS-DB" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4-%EB%AA%A9%EC%A0%81"><span class="toc-text">블로그 개설 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%811-%EA%B3%B5%EB%B6%80%ED%95%9C-%EA%B2%83-%EC%A0%95%EB%A6%AC"><span class="toc-text">목적1. 공부한 것 정리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%EC%A0%812-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"><span class="toc-text">목적2. 포트폴리오</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC"><span class="toc-text">사용된 블로그 플랫폼</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%95%B4%EB%8B%B9-%ED%85%8C%EB%A7%88%EC%9D%98-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5"><span class="toc-text">해당 테마의 주요 기능:</span></a></li></ol></li></ol></li></ol></li></ol>
+        <h1 class="article-title">WEB, WAS, DB 관계</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="정보글">정보글</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">informational</a>
+            
+            <a class="color4">web</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-09-09 21:51:10'>2024-04-21 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%9B%B9-%EC%84%9C%EB%B2%84%EC%9D%98-%EA%B5%AC%EC%A1%B0"><span class="toc-text">웹 서버의 구조</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%9B%B9-%EC%84%9C%EB%B2%84-WEB-Server-%EC%9D%98-%EC%97%AD%ED%99%9C"><span class="toc-text">웹 서버(WEB Server)의 역활</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WAS-Web-Application-Server-%EC%9D%98-%EC%97%AD%ED%99%9C"><span class="toc-text">WAS(Web Application Server)의 역활</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DB-DataBase-%EC%9D%98-%EC%97%AD%ED%99%9C"><span class="toc-text">DB(DataBase)의 역활</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL-%EA%B5%AC%EC%A1%B0"><span class="toc-text">MySQL 구조</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%AA%85%EC%B9%AD"><span class="toc-text">명칭</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%9A%94%EC%95%BD"><span class="toc-text">요약</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,23 +719,42 @@
     }
 </style>
 </div>
-            <h1 id="블로그-개설-목적"><a href="#블로그-개설-목적" class="headerlink" title="블로그 개설 목적"></a>블로그 개설 목적</h1><h2 id="목적1-공부한-것-정리"><a href="#목적1-공부한-것-정리" class="headerlink" title="목적1. 공부한 것 정리"></a>목적1. 공부한 것 정리</h2><p>블로그를 이용해서 지금 하고있는 공부에 대한 정리를 하려고 합니다  </p>
-<p>이유는 나중에 오류 해결이나 사용법이 기억나지 않을 때 정리된 글을 보며 빠르게 떠올리기 위함입니다</p>
-<pre><code class="Python">print(&quot;hello world!&quot;)
-</code></pre>
-<h2 id="목적2-포트폴리오"><a href="#목적2-포트폴리오" class="headerlink" title="목적2. 포트폴리오"></a>목적2. 포트폴리오</h2><p>공부한 것 정리를 보여주며 이렇게 공부를 했고 </p>
-<p>내가 아는 지식이 어느정도인지 보여주기 위한 용도인 포트폴리오로도 사용하기 위함입니다. </p>
-<h2 id="사용된-블로그-플랫폼"><a href="#사용된-블로그-플랫폼" class="headerlink" title="사용된 블로그 플랫폼"></a>사용된 블로그 플랫폼</h2><p>해당 블로그는 hexo를 이용한 정적 페이지로 만들어졌고  </p>
-<p>해당 테마는 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>에 들어가시면 다운 받을 수 있습니다</p>
-<h4 id="해당-테마의-주요-기능"><a href="#해당-테마의-주요-기능" class="headerlink" title="해당 테마의 주요 기능:"></a>해당 테마의 주요 기능:</h4><ul>
-<li>검색은 기사 제목, 태그(#tag), 작성자(@author)를 지원합니다.</li>
-<li>패드&#x2F;휴대폰 및 기타 모바일 단말기 적응</li>
-<li>페이지 전역 단축키 3-hexo 단축키 설명</li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="웹-서버의-구조"><a href="#웹-서버의-구조" class="headerlink" title="웹 서버의 구조"></a>웹 서버의 구조</h2><p><img src="/image/Informational-Article/01.png">  </p>
+<p><strong>웹 서버에 대해 자세하게 알기 위해서는 먼저 WEB&lt;-&gt;WAS&lt;-&gt;DB 구조를 알아야 합니다.</strong></p>
+<h2 id="웹-서버-WEB-Server-의-역활"><a href="#웹-서버-WEB-Server-의-역활" class="headerlink" title="웹 서버(WEB Server)의 역활"></a>웹 서버(WEB Server)의 역활</h2><p>웹 브라우저(클라이언트)가 웹 서버로 요청을 보내면 웹 서버는 <strong>WAS로 받은 데이터를 전달</strong> 하고</p>
+<p>WAS에서 받은 <strong>정적인 콘텐츠(HTML, CSS, JavaScript)를 다시 웹 브라우저(클라이언트)로 전달</strong> 하는 역활을 수행 합니다.</p>
+<h2 id="WAS-Web-Application-Server-의-역활"><a href="#WAS-Web-Application-Server-의-역활" class="headerlink" title="WAS(Web Application Server)의 역활"></a>WAS(Web Application Server)의 역활</h2><p>클라이언트로부터 전달 받은 데이터를 사용해 프로그래밍 언어(PHP, JSP, ASP, etc…)를 실행하고</p>
+<p><strong>프로그래밍된 로직에 따라 DB가 필요하면 DB도 사용해 정적인 콘텐츠를 만들고</strong></p>
+<p>정적인 콘텐츠를 다시 웹 서버로 전달하는 역활을 수행 합니다.</p>
+<h2 id="DB-DataBase-의-역활"><a href="#DB-DataBase-의-역활" class="headerlink" title="DB(DataBase)의 역활"></a>DB(DataBase)의 역활</h2><p>프로그래밍 언어가 실행될 때 만약 데이터의 저장이 필요하거나 데이터에 대한 조회가 필요할 경우</p>
+<p><strong>데이터를 저장하거나 조회하는 역활</strong> 을 수행 합니다.</p>
+<p>저장하는 방식은 어떤 데이터 베이스(DataBase)를 쓰느냐에 따라 다릅니다</p>
+<p>데이터 베이스(DataBase)의 종류는 관계형(Relational), 키-값형(KV store), 객체형(Object), 문서형(Document), 컬럼 패밀리형(Column Family) 등이 있으며 <strong>주로 관계형(Relational) 데이터 베이스를 많이 사용</strong> 합니다</p>
+<h2 id="MySQL-구조"><a href="#MySQL-구조" class="headerlink" title="MySQL 구조"></a>MySQL 구조</h2><p>MySQL은 관계형 데이터 베이스로 데이터를 행(Row)과 열(Column)이 있는 표 형식으로 저장됩니다<br>엑셀로 예를 들자면 다음과 같습니다<br><img src="/image/Informational-Article/02.png"></p>
+<h3 id="명칭"><a href="#명칭" class="headerlink" title="명칭"></a>명칭</h3><blockquote>
+<p>DataBase : 엑셀 파일<br>Table : 엑셀의 시트<br>row : 데이터 항목<br>column : 데이터 값</p>
+</blockquote>
+<h2 id="요약"><a href="#요약" class="headerlink" title="요약"></a>요약</h2><p>WEB : 사용자로 부터 요청 받은 데이터를 WAS에 전달 하고 WAS에서 처리 된 데이터를 다시 받아서 사용자에게 전달<br>WAS : WEB으로 부터 요청 받은 데이터를 프로그래밍 언어로 실행한 후 다시 WEB Server로 전달<br>DB : 프로그래밍 언어에서 데이터를 저장받거나 저장된 데이터를 조회한 후 프로그래밍 언어로 전달</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -696,11 +763,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>
