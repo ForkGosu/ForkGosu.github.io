@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>File-Vulnerability-Cheat-Sheet | ForkGosu Blog</title>
-  <meta name="keywords" content=" cheat-sheet , web-hacking , csrf ">
-  <meta name="description" content="File-Vulnerability-Cheat-Sheet | ForkGosu Blog">
+  <title>Base64란? | ForkGosu Blog</title>
+  <meta name="keywords" content=" informational , web ">
+  <meta name="description" content="Base64란? | ForkGosu Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Base64란?암호화를 복호화 할때 키가 필요한 것과는 다르게 Base64는 인코딩과 디코딩으로 문자의 모양만 바꿔둔 것 입니다. Base64는 64진법을 뜻하며 ASCII문자중 화면에 표시되는 문자들을 64진법으로 표현한 것을 뜻합니다.  Base64 인코딩 원리변경하는 방식은 모든 문자를 6bit씩 자른 뒤 6bit에 해당하는 문자를 Base64의 표에">
 <meta property="og:type" content="article">
@@ -678,9 +678,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Cheat-Sheet/Web-Hacking/04-File-Vulnerability-Cheat-Sheet" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Informational-Article/06-About-Base64" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">File-Vulnerability-Cheat-Sheet</h1>
+        <h1 class="article-title">Base64란?</h1>
     
     <div class="article-meta">
         
@@ -690,9 +690,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="치트-시트">치트-시트</a> > 
-            
-            <a  data-rel="치트-시트&lt;---&gt;웹-해킹">웹-해킹</a>
+            <a  data-rel="정보글">정보글</a>
             
         </span>
         
@@ -700,18 +698,16 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color2">cheat-sheet</a>
+            <a class="color4">informational</a>
             
-            <a class="color2">web-hacking</a>
-            
-            <a class="color5">csrf</a>
+            <a class="color4">web</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2024-09-10 20:23:05'>2024-08-14 05:00</time>
+            Created At : <time class="date" title='Updated At: 2024-09-11 14:49:47'>2024-09-11 13:00</time>
         
     </div>
     <div class="article-meta">
@@ -733,7 +729,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%99%95%EC%9E%A5%EC%9E%90%EC%9D%98-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90-%EB%B3%80%EA%B2%BD"><span class="toc-text">확장자의 대소문자 변경</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Double-extension-%EC%9D%B4%EC%A4%91-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%9A%B0%ED%9A%8C%EA%B8%B0%EB%B2%95"><span class="toc-text">Double extension(이중 확장자 우회기법)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#htaccess-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C"><span class="toc-text">.htaccess 파일 업로드</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NULL-Byte-Injection"><span class="toc-text">NULL Byte Injection</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Base64%EB%9E%80"><span class="toc-text">Base64란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base64-%EC%9D%B8%EC%BD%94%EB%94%A9-%EC%9B%90%EB%A6%AC"><span class="toc-text">Base64 인코딩 원리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base64-%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9C%A0"><span class="toc-text">Base64 사용 이유</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -749,13 +745,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="확장자의-대소문자-변경"><a href="#확장자의-대소문자-변경" class="headerlink" title="확장자의 대소문자 변경"></a>확장자의 대소문자 변경</h2><p><code>php</code>글자만 필터링 시 <code>pHP</code>이렇게 수정하여 올리는 것</p>
-<h2 id="Double-extension-이중-확장자-우회기법"><a href="#Double-extension-이중-확장자-우회기법" class="headerlink" title="Double extension(이중 확장자 우회기법)"></a>Double extension(이중 확장자 우회기법)</h2><p>파일 업로드 저장하는 기능을 구현할 때 첫번째 점(.)이 나온 뒤 jpg만 확인하고 맨 뒤에것을 확인 안해서 생기는 문제</p>
-<p>파일명을 <code>webshell.jpg.php</code>처럼 업로드 하면 됨</p>
-<h2 id="htaccess-파일-업로드"><a href="#htaccess-파일-업로드" class="headerlink" title=".htaccess 파일 업로드"></a>.htaccess 파일 업로드</h2><p>설정 파일 <code>.htaccess</code>으로 이름을 지정해 올리면 업로드 디렉토리에 다른 확장자여도 서버 언어를 실행하게 만듬</p>
-<pre><code class="text">AddType application/x-httpd-php .txt
-</code></pre>
-<h2 id="NULL-Byte-Injection"><a href="#NULL-Byte-Injection" class="headerlink" title="NULL Byte Injection"></a>NULL Byte Injection</h2><p>취약한 버전에서만 동작하며 파일명을 <code>test.php%00.jpg</code>과 같이 해서 업로드하면 파일 저장 시 %00뒤에 글자가 잘려서 저장되는 문제</p>
+        <h2 id="Base64란"><a href="#Base64란" class="headerlink" title="Base64란?"></a>Base64란?</h2><p>암호화를 복호화 할때 키가 필요한 것과는 다르게 Base64는 인코딩과 디코딩으로 문자의 모양만 바꿔둔 것 입니다.</p>
+<p>Base64는 64진법을 뜻하며 ASCII문자중 화면에 표시되는 문자들을 64진법으로 표현한 것을 뜻합니다.</p>
+<p><img src="/image/Informational-Article/33.png"></p>
+<h2 id="Base64-인코딩-원리"><a href="#Base64-인코딩-원리" class="headerlink" title="Base64 인코딩 원리"></a>Base64 인코딩 원리</h2><p>변경하는 방식은 모든 문자를 6bit씩 자른 뒤 6bit에 해당하는 문자를 Base64의 표에서 찾아 치환하는 것입니다.</p>
+<p><strong>문자열이 Man이라 했을때 인코딩 한다고 가정하면 해당 과정은 다음과 같습니다.</strong></p>
+<ol>
+<li><dl><dt>Man문자를 8bit단위로 나타내면 다음과 같습니다.</dt><dd><code>Man</code> -&gt; <code>01001101 01100001 01101110</code></dd></dl></li>
+<li><dl><dt>8bit로 나타낸 문자를 6bit로 나눕니다.</dt><dd><code>01001101 01100001 01101110</code> -&gt; <code>010011 010110 000101 101110</code></dd></dl></li>
+<li><dl><dt>6bit로 나눈 문자를 다시 Base64 표를 보고 변환시켜줍니다.</dt><dd><code>010011 010110 000101 101110</code> -&gt; <code>TWFu</code></dd></dl></li>
+</ol>
+<p><strong>만약 8bit형식을 6bit로 끊어내다가 2bit씩 남는다면 남은 2bit당 <code>=</code>를 추가하게 됩니다.</strong></p>
+<ol>
+<li><dl><dt><code>Mana</code>문자를 8bit단위로 나타내면 다음과 같습니다.</dt><dd><code>Mana</code> -&gt; <code>01001101 01100001 01101110 01100001</code></dd></dl></li>
+<li><dl><dt>8bit로 나타낸 문자를 6bit로 나눕니다.</dt><dd><code>01001101 01100001 01101110 01100001</code> -&gt; <code>010011 010110 000101 101110 011000 01</code></dd></dl></li>
+<li><dl><dt>6bit로 나눈 문자를 다시 Base64 표를 보고 변환시켜줍니다.</dt><dd><code>010011 010110 000101 101110 011000 01</code> -&gt; <code>TWFuYQ==</code></dd></dl></li>
+</ol>
+<p>이 처럼 2bit씩 남는다면 base64를 유추할 수 있게 만드는 <code>==</code>는 이렇게 발생됩니다.</p>
+<p>디코딩은 이와 반대로 생각하시면 될 것 같습니다.</p>
+<h2 id="Base64-사용-이유"><a href="#Base64-사용-이유" class="headerlink" title="Base64 사용 이유"></a>Base64 사용 이유</h2><p>Base64로 인코딩하게 되면 전송해야될 데이터 양이 33% 더 늘어나게 되는데, 왜 Base64을 만들게 됬는지 궁금합니다.</p>
+<p>Base64를 사용하는 이유는 시스템간 데이터를 전달할 때 생기는 오류를 해결하고자 사용하였습니다.</p>
+<p>만약 binary데이터 중에 ASCII에 포함되지 않는 Data가 있다면 ASCII로 전달 시 Data손실이 발생 할 수 있기 떄문에 Base64를 이용해서 제어 문자와 특수문자를 제외한 안전한 출력 문자만 이용해 데이터만을 전달하여 Data손실을 막을 수 있었습니다.</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 블로그를 봐주셔서 감사합니다. </span>
